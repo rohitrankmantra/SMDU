@@ -19,7 +19,7 @@ export function SectionHeading({ title, subtitle, description, alignment = "cent
     >
       {subtitle && (
         <span
-          className={`inline-block text-sm font-semibold tracking-wider uppercase mb-3 ${light ? "text-gold-light" : "text-gold"}`}
+          className={`inline-block text-sm font-semibold tracking-wider uppercase mb-3 ${light ? "text-[#f46b13]/80" : "text-[#f46b13]"}`}
         >
           {subtitle}
         </span>
