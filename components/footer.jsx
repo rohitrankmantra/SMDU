@@ -60,7 +60,11 @@ export function Footer() {
       {/* Newsletter */}
       <div className="border-b border-white/10">
         <div className="container mx-auto px-6 py-12 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
             <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4">
               Stay Connected with SMDU
             </h3>
@@ -86,14 +90,23 @@ export function Footer() {
       {/* Main Footer */}
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          {/* Info */}
+
+          {/* LOGO + INFO */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-14 h-14 rounded-full bg-[#f46b13] flex items-center justify-center">
-                <GraduationCap className="w-8 h-8 text-white" />
+            <Link href="/" className="flex items-center gap-4 mb-6 group">
+              {/* LOGO IMAGE */}
+              <div className="w-14 h-14 rounded-full overflow-hidden bg-white shadow-lg">
+                <img
+                  src="/logo.webp"   // 👈 put your logo here
+                  alt="SMDU Logo"
+                  className="w-full h-full object-contain p-2"
+                />
               </div>
+
               <div>
-                <h2 className="font-serif text-xl font-bold">Smt. Manjira Devi</h2>
+                <h2 className="font-serif text-xl font-bold group-hover:text-[#f46b13] transition">
+                  Smt. Manjira Devi
+                </h2>
                 <p className="text-[#f46b13] text-sm font-semibold uppercase">
                   University
                 </p>
@@ -120,7 +133,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Links */}
+          {/* LINKS */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
               <h4 className="font-serif font-semibold text-lg mb-6 text-[#f46b13] capitalize">
@@ -129,7 +142,10 @@ export function Footer() {
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-white/70 hover:text-[#f46b13] text-sm">
+                    <Link
+                      href={link.href}
+                      className="text-white/70 hover:text-[#f46b13] transition"
+                    >
                       {link.label}
                     </Link>
                   </li>
@@ -139,37 +155,30 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Bottom */}
+        {/* BOTTOM */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex gap-4">
-  {socialLinks.map((social, i) => (
-    <motion.a
-      key={i}
-      href={social.href}
-      whileHover={{ scale: 1.12, y: -3 }}
-      transition={{ type: "spring", stiffness: 300 }}
-      className="
-        w-10 h-10 rounded-full
-        bg-white/10
-        flex items-center justify-center cursor-pointer
-        group
-        hover:bg-[#f46b13]
-        hover:shadow-lg hover:shadow-[#f46b13]/30
-        transition-all duration-300
-      "
-    >
-      <social.icon
-        className="
-          w-5 h-5
-          text-white/80
-          group-hover:text-white
-          transition-colors duration-300
-        "
-      />
-    </motion.a>
-  ))}
-</div>
 
+          {/* SOCIAL ICONS */}
+          <div className="flex gap-4">
+            {socialLinks.map((social, i) => (
+              <motion.a
+                key={i}
+                href={social.href}
+                whileHover={{ scale: 1.15, y: -4, rotate: 4 }}
+                transition={{ type: "spring", stiffness: 260 }}
+                className="
+                  relative w-10 h-10 rounded-full
+                  bg-white/10
+                  flex items-center justify-center
+                  hover:bg-[#f46b13]
+                  hover:shadow-xl hover:shadow-[#f46b13]/40
+                  transition-all duration-300
+                "
+              >
+                <social.icon className="w-5 h-5 text-white" />
+              </motion.a>
+            ))}
+          </div>
 
           <p className="text-white/50 text-sm">
             © {new Date().getFullYear()} SMDU. All Rights Reserved.
