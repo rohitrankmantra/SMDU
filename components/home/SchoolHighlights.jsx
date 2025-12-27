@@ -18,28 +18,28 @@ const mainFeatures = [
     desc:
       "Smt. Manjira Devi University offers excellent placement support through a dedicated placement cell that collaborates with top companies to ensure students achieve high placement rates.",
     image:
-      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "/home/about2.jpeg",
   },
   {
     title: "5I Pedagogy",
     desc:
       "Our 5I Pedagogy enhances learning with interactive, innovative, and inclusive teaching methods that inspire every student to reach their full potential.",
     image:
-      "https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg",
+      "/home/life4.webp",
   },
   {
     title: "Experiential Learning",
     desc:
       "We emphasize hands-on experiences through real-world projects, internships, and simulations that prepare students for professional success.",
     image:
-      "https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg",
+      "/home/life3.jpg",
   },
   {
     title: "Industry Interaction",
     desc:
       "Through guest lectures, workshops, and partnerships with industry leaders, we bridge the gap between academics and the professional world.",
     image:
-      "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+      "/home/campus2.jpg",
   },
 ]
 
