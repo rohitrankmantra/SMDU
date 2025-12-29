@@ -2,51 +2,89 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { PageHero } from '../../../components/page-hero'
+import { SectionHeading } from '../../../components/section-heading'
+import { BookOpen, HeartHandshake, Sparkles } from "lucide-react"
 
-const missionVisionData = [
+export const missionVisionData = [
   {
     title: "Educational Excellence",
     description:
-      "Interdisciplinary, skill-oriented education that develops critical thinking and creativity.",
+      "Deliver interdisciplinary, skill-oriented education that nurtures critical thinking, innovation, and creativity — preparing students to excel in a rapidly evolving world.",
     image:
-      "https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg",
+      "/home/review3.webp",
   },
   {
     title: "Cultural Integration",
     description:
-      "Education rooted in the cultural heritage and values of Uttarakhand.",
+      "Preserve and celebrate the cultural heritage of Uttarakhand while harmoniously blending it with modern education and global perspectives.",
     image:
-      "https://images.pexels.com/photos/8112120/pexels-photo-8112120.jpeg",
+      "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70",
   },
   {
     title: "Sustainability",
     description:
-      "Promoting environmental and social responsibility through learning and research.",
+      "Promote social and environmental responsibility through eco-conscious learning, research, and community initiatives that protect our Himalayan ecosystem.",
     image:
-      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "/home/life3.jpg",
   },
   {
     title: "Community Engagement",
     description:
-      "Empowering rural and hilly communities through outreach and knowledge sharing.",
+      "Empower rural and hilly communities through meaningful outreach, lifelong learning, and knowledge-sharing programs that improve quality of life.",
     image:
-      "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg",
+      "/home/life4.webp",
   },
   {
     title: "Global Citizenship",
     description:
-      "Preparing students to lead with empathy in a connected global society.",
+      "Foster cross-cultural understanding, leadership, and compassion — preparing students to contribute responsibly to a connected world.",
     image:
-      "https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg",
+      "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b",
   },
   {
     title: "Continuous Improvement",
     description:
-      "Adapting and innovating with evolving global educational standards.",
+      "Adapt, innovate, and evolve with changing global education landscapes — ensuring quality, relevance, and excellence at every level.",
     image:
-      "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
+      "https://images.unsplash.com/photo-1531482615713-2afd69097998",
   },
-];
+]
+export const missionData = [
+  {
+    title: "Comprehensive & Holistic Education",
+    description:
+      "Provide inclusive, multidisciplinary learning that nurtures competence, creativity, and strong moral character.",
+  },
+  {
+    title: "Youth Empowerment",
+    description:
+      "Equip students — especially from rural and hilly regions — with skills and confidence to build sustainable livelihoods.",
+  },
+  {
+    title: "Cultural Preservation",
+    description:
+      "Promote and protect the cultural heritage, values, and traditions of Uttarakhand through meaningful education.",
+  },
+  {
+    title: "Sustainable Development",
+    description:
+      "Encourage environmentally responsible learning and research that support the Himalayan ecosystem.",
+  },
+  {
+    title: "Healthcare & Wellbeing",
+    description:
+      "Advance holistic health through education in Naturopathy, Paramedical Sciences, and allied disciplines.",
+  },
+  {
+    title: "Research & Innovation",
+    description:
+      "Foster inquiry, creativity, and innovation that contribute positively to society and knowledge growth.",
+  },
+]
+
+
+
+
 
 const page = () => {
   const containerVariants = {
@@ -82,66 +120,241 @@ const page = () => {
         bgImage="/about/vision-mission/vision-mission-hero.jpg"
         breadcrumbs={[{ label: "Vision & Mission" }]}
       />
-      <section className="py-28 bg-relative-to-br from-gray-50 to-orange-50/20">
-        <div className="container mx-auto px-6">
-          {/* Heading */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl mx-auto text-center mb-20"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#f56a14] mb-6 bg-relative-to-r from-[#f56a14] to-orange-600 bg-clip-text ">
-              Our  Vision
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-             Smt. Manjira Devi University envisions itself as a leading center of excellence nestled in the Himalayas, dedicated to knowledge, innovation, and inclusivity. Our vision is to blend tradition with technology — creating global citizens rooted in cultural heritage.
+       <section className="py-20 bg-linear-to-b from-white to-orange-50/40">
+  <div className="container mx-auto px-6">
+
+    <SectionHeading
+      subtitle="Our Vision"
+      title="Shaping Future Leaders"
+      description="Smt. Manjira Devi University envisions becoming a premier Himalayan institution — nurturing knowledge, research, innovation, and inclusive global citizenship."
+      alignment="center"
+    />
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {missionVisionData.map((item, index) => (
+        <div
+          key={index}
+          className="
+            rounded-2xl
+            bg-white/60
+            backdrop-blur-xl
+            border border-orange-100
+            shadow-lg
+            hover:shadow-2xl
+            hover:-translate-y-1
+            transition
+            overflow-hidden
+          "
+        >
+
+          {/* IMAGE */}
+          <div className="h-40 w-full overflow-hidden relative">
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
+          </div>
+
+          {/* CONTENT */}
+          <div className="p-7">
+            <h3 className="text-xl font-semibold mb-3 text-gray-900">
+              {item.title}
+            </h3>
+
+            <p className="text-gray-700 leading-relaxed text-[15.5px]">
+              {item.description}
             </p>
-          </motion.div>
+          </div>
 
-          {/* Cards */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
-          >
-            {missionVisionData.map((item, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl border border-orange-100/50 transition-all duration-500 hover:-translate-y-2 hover:border-[#f56a14]/30"
-                whileHover={{ scale: 1.02 }}
-              >
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-relative-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </div>
-
-                {/* Content */}
-                <div className="p-6 lg:p-8 relative">
-                  <div className="absolute -top-6 left-4 w-12 h-12 bg-[#f56a14] rounded-full flex items-center justify-center text-white text-lg font-bold opacity-80">
-                    {index + 1}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 mt-4">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {item.description}
-                  </p>
-                  
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
-      </section>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+{/* mission data  */}
+<section className="py-24 relative overflow-hidden bg-white">
+  {/* ===== BG PATTERN ===== */}
+  <div className="absolute inset-0 pattern-lines opacity-60" />
+
+  <div className="container mx-auto px-6 max-w-6xl relative">
+
+    <SectionHeading
+      subtitle="Our Mission"
+      title="Empowering Individuals"
+      description="We strive to build ethical, skilled, and compassionate individuals through transformative education rooted in Himalayan values and global perspectives."
+      alignment="center"
+    />
+
+    {/* ===== GRID CARDS ===== */}
+    <div className="grid md:grid-cols-2 gap-8 mt-16">
+
+      {missionData.map((item, index) => (
+        <div
+          key={index}
+          className="
+            group
+            bg-white/70 backdrop-blur-xl
+            border border-[#f56a14]/20
+            shadow-lg rounded-2xl p-7
+            hover:shadow-2xl hover:-translate-y-1
+            transition
+          "
+        >
+          <div className="flex items-start gap-5">
+
+            {/* ===== SQUARE NUMBER BOX ===== */}
+            <div
+              className="
+                w-20 h-auto
+                rounded-lg
+                font-bold text-white text-lg
+                flex items-center justify-center
+                shadow-md
+              "
+              style={{ backgroundColor: '#f56a14' }}
+            >
+              {index + 1}
+            </div>
+
+            {/* ===== TEXT ===== */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-700 leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+
+          </div>
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>
+
+
+{/* our philosphy  */}
+<section className="py-24 relative overflow-hidden bg-[#fff7f0]">
+
+  <div className="container mx-auto px-6 max-w-6xl relative">
+
+    {/* HEADING */}
+    <div className="text-center max-w-3xl mx-auto mb-16">
+      <span
+        className="
+          inline-flex items-center gap-2
+          text-sm font-semibold tracking-wider uppercase mb-4
+          px-4 py-1.5 rounded-full border
+        "
+        style={{
+          color: '#f56a14',
+          borderColor: '#f56a14',
+          backgroundColor: '#f56a14' + '15'
+        }}
+      >
+        Our Philosophy
+      </span>
+
+      <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-900">
+        Learning Rooted in Purpose & Humanity
+      </h2>
+
+      <p className="mt-4 text-gray-600 leading-relaxed">
+        We believe true education nurtures the mind, heart, and spirit —
+        fostering wisdom, compassion, leadership, and a deep connection
+        with nature and society.
+      </p>
+    </div>
+
+    {/* CONTENT CARD */}
+    <div
+      className="
+        bg-white/80 backdrop-blur-xl
+        border border-[#f56a14]/20
+        rounded-3xl shadow-xl
+        p-10 md:p-14
+        max-w-5xl mx-auto
+      "
+    >
+      <div className="grid md:grid-cols-3 gap-10">
+
+        {/* CARD 1 */}
+        <div className="space-y-3">
+          <div
+            className="w-12 h-12 rounded-xl flex items-center justify-center shadow"
+            style={{ backgroundColor: '#f56a14' }}
+          >
+            <BookOpen className="w-6 h-6 text-white" />
+          </div>
+
+          <h3 className="text-xl font-semibold text-gray-900">
+            Purpose-Driven Learning
+          </h3>
+
+          <p className="text-gray-700">
+            Education that builds clarity, confidence, and meaningful direction in life.
+          </p>
+        </div>
+
+        {/* CARD 2 */}
+        <div className="space-y-3">
+          <div
+            className="w-12 h-12 rounded-xl flex items-center justify-center shadow"
+            style={{ backgroundColor: '#f56a14' }}
+          >
+            <HeartHandshake className="w-6 h-6 text-white" />
+          </div>
+
+          <h3 className="text-xl font-semibold text-gray-900">
+            Human-Centered Values
+          </h3>
+
+          <p className="text-gray-700">
+            Developing empathy, ethics, and respect for culture, nature, and humanity.
+          </p>
+        </div>
+
+        {/* CARD 3 */}
+        <div className="space-y-3">
+          <div
+            className="w-12 h-12 rounded-xl flex items-center justify-center shadow"
+            style={{ backgroundColor: '#f56a14' }}
+          >
+            <Sparkles className="w-6 h-6 text-white" />
+          </div>
+
+          <h3 className="text-xl font-semibold text-gray-900">
+            Lifelong Curiosity
+          </h3>
+
+          <p className="text-gray-700">
+            Inspiring learners to explore, question, innovate, and evolve — always.
+          </p>
+        </div>
+      </div>
+
+      <hr className="my-10 border-gray-200" />
+
+      <p className="text-center text-gray-700 text-lg leading-relaxed max-w-3xl mx-auto">
+        At the heart of our philosophy lies a simple belief —
+        when education is rooted in compassion, curiosity, and purpose,
+        it transforms not just individuals, but the world around them.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
     </>
   )
 }

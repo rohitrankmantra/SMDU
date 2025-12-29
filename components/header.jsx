@@ -19,20 +19,20 @@ import {
   ArrowLeft,
   Facebook,
   Linkedin,
-    Crown,
+  Crown,
   UserCog,
   ClipboardList,
-    Landmark,
+  Landmark,
   Gavel,
   UsersRound,
   PiggyBank,
   FileCheck,
-  Scale
+  Scale,
 } from "lucide-react";
 import { FaRegNewspaper } from "react-icons/fa";
 import { RiUserSettingsLine } from "react-icons/ri";
 import { MdOutlineManageHistory } from "react-icons/md";
-import { Button } from "@/components/ui/button";  
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 const programmesData = {
   undergraduate: {
@@ -154,10 +154,10 @@ const navigationItems = [
         {
           title: "Our University",
           items: [
-               {
-              label: "History",
+            {
+              label: "History & Legacy",
               href: "/about/history",
-              icon: MdOutlineManageHistory,
+              icon: BookOpen,
             },
             {
               label: "Vision & Mission",
@@ -165,93 +165,88 @@ const navigationItems = [
               icon: GraduationCap,
             },
             {
-              label: "History & Legacy",
-              href: "/about/history",
-              icon: BookOpen,
-            },
-                {
               label: "Approvals",
-              href: "/about#approvals",
+              href: "/about/UGCApproval.pdf",
               icon: FileText,
             },
-                {
+            {
               label: "Gazette Notification",
-              href: "/about#gazette",
+              href: "/about/Gazette.pdf",
               icon: FaRegNewspaper,
             },
           ],
         },
-       {
-  title: "Leadership",
-  items: [
-    {
-      label: "President",
-      href: "/about/president",
-      icon: Crown,
-    },
-    {
-      label: "Vice Chancellor",
-      href: "/about/vice-chancellor",
-      icon: GraduationCap,
-    },
-    {
-      label: "Pro Vice Chancellor",
-      href: "/about/pro-vice-chancellor",
-      icon: RiUserSettingsLine, 
-    },
-    {
-      label: "Registrar",
-      href: "/about/registrar",
-      icon: ClipboardList,
-    },
-    {
-      label: "Control of Examination",
-      href: "/about/control-of-examination",
-      icon: UserCog,
-    },
-    {
-      label: "Officers of the University",
-      href: "/about/officers-of-the-university",
-      icon: Users, 
-    },
-  ],
-},
+        {
+          title: "Leadership",
+          items: [
+            {
+              label: "President",
+              href: "/about/president",
+              icon: Crown,
+            },
+            {
+              label: "Vice Chancellor",
+              href: "/about/vice-chancellor",
+              icon: GraduationCap,
+            },
+            {
+              label: "Pro Vice Chancellor",
+              href: "/about/pro-vice-chancellor",
+              icon: RiUserSettingsLine,
+            },
+            {
+              label: "Registrar",
+              href: "/about/registrar",
+              icon: ClipboardList,
+            },
+            {
+              label: "Control of Examination",
+              href: "/about/control-of-examination",
+              icon: UserCog,
+            },
+            {
+              label: "Officers of the University",
+              href: "/about/officers-of-the-university",
+              icon: Users,
+            },
+          ],
+        },
 
         {
-  title: "Government Bodies",
-  items: [
-    {
-      label: "Board of Governors",
-      href: "/about/board-of-governors",
-      icon: Landmark,
-    },
-    {
-      label: "Board of Management",
-      href: "/about/board-of-management",
-      icon: UsersRound,
-    },
-    {
-      label: "Admission Council",
-      href: "/about/admission-council",
-      icon: FileCheck,
-    },
-    {
-      label: "Finance Committee",
-      href: "/about/finance-committee",
-      icon: PiggyBank,
-    },
-    {
-      label: "Board of Examination",
-      href: "/about/board-of-examination",
-      icon: Scale,
-    },
-    {
-      label: "Academic Council",
-      href: "/about/academic-council",
-      icon: Gavel,
-    },
-  ],
-},
+          title: "Government Bodies",
+          items: [
+            {
+              label: "Board of Governors",
+              href: "/about/board-of-governors",
+              icon: Landmark,
+            },
+            {
+              label: "Board of Management",
+              href: "/about/board-of-management",
+              icon: UsersRound,
+            },
+            {
+              label: "Admission Council",
+              href: "/about/admission-council",
+              icon: FileCheck,
+            },
+            {
+              label: "Finance Committee",
+              href: "/about/finance-committee",
+              icon: PiggyBank,
+            },
+            {
+              label: "Board of Examination",
+              href: "/about/board-of-examination",
+              icon: Scale,
+            },
+            {
+              label: "Academic Council",
+              href: "/about/academic-council",
+              icon: Gavel,
+            },
+          ],
+        },
       ],
       featured: {
         title: "Discover SMDU",
@@ -881,6 +876,16 @@ export function Header() {
                                     <li key={subItem.label}>
                                       <Link
                                         href={subItem.href}
+                                        target={
+                                          subItem.href.endsWith(".pdf")
+                                            ? "_blank"
+                                            : "_self"
+                                        }
+                                        rel={
+                                          subItem.href.endsWith(".pdf")
+                                            ? "noopener noreferrer"
+                                            : undefined
+                                        }
                                         className="flex items-center gap-2  font-cenzil  py-2 text-sm text-gray-600y hover:text-[#F46B13] transition-colors group"
                                       >
                                         <subItem.icon className="w-6 h-6 text-[#F46B13]/60 group-hover:text-[#F46B13] transition-colors" />
