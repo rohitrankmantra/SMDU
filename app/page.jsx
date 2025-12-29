@@ -40,7 +40,6 @@ const staggerContainer = {
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      <Header />
       <Hero/>
       <About/>
       <Highlights/>
@@ -52,7 +51,6 @@ export default function HomePage() {
       <StudentLife/>
       <TestimonialsSlider/>
       <CampusPreview/>
-      <Footer />
     </main>
   )
 }

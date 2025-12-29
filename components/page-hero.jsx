@@ -7,12 +7,12 @@ import { ChevronRight } from "lucide-react"
 export function PageHero({
   title,
   subtitle,
-  description,
   image,
+  description,
   breadcrumbs = [],
 }) {
   return (
-    <section className="relative min-h-[70vh] flex items-end pt-36 pb-24 overflow-hidden">
+    <section className="relative min-h-[70vh] flex items-end  pb-24 overflow-hidden">
 
       {/* ================= BACKGROUND IMAGE ================= */}
       <motion.div
@@ -22,19 +22,16 @@ export function PageHero({
         className="absolute inset-0 z-0"
       >
         <img
-          src={image || "/placeholder.svg"}
+          src={image || "/home/about2.jpeg"}
           alt={title}
           className="w-full h-full object-cover"
         />
 
         {/* Dark cinematic overlay */}
-        <div className="absolute inset-0 bg-linear-to-t from-[#050814]/95 via-[#0b1324]/70 to-transparent" />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/50" />
       </motion.div>
 
-      {/* ================= ORANGE GLOW BLOOM ================= */}
-      <div className="absolute -top-40 -left-40 w-130 h-130 bg-[#EA580C]/30 blur-[140px] rounded-full z-0" />
-      <div className="absolute top-1/3 -right-32 w-105 h-105 bg-[#EA580C]/20 blur-[120px] rounded-full z-0" />
+   
 
       <div className="container mx-auto px-6 relative z-10">
 
@@ -67,12 +64,12 @@ export function PageHero({
                   {crumb.href ? (
                     <Link
                       href={crumb.href}
-                      className="hover:text-[#EA580C] transition"
+                      className="hover:text-[#f56a14] transition"
                     >
                       {crumb.label}
                     </Link>
                   ) : (
-                    <span className="text-[#EA580C] font-semibold">
+                    <span className="text-[#f56a14] font-semibold">
                       {crumb.label}
                     </span>
                   )}
@@ -95,13 +92,13 @@ export function PageHero({
               className="relative inline-flex items-center gap-2
               px-6 py-2.5 rounded-full mb-6
               text-sm font-semibold text-white
-              bg-linear-to-r from-[#EA580C] to-amber-400
-              shadow-lg shadow-[#EA580C]/40"
+              bg-[#f56a14]
+              shadow-lg shadow-[#f56a14]/40"
             >
               {subtitle}
 
               {/* glow */}
-              <span className="absolute inset-0 blur-xl bg-[#EA580C]/40 rounded-full -z-10" />
+              {/* <span className="absolute inset-0  bg-[#f56a14] rounded-full -z-10" /> */}
             </span>
           )}
 
@@ -113,7 +110,7 @@ export function PageHero({
             <span className="relative inline-block">
               {title}
               {/* underline accent */}
-              <span className="absolute left-0 -bottom-2 w-1/3 h-1 bg-linear-to-r from-[#EA580C] to-amber-400 rounded-full" />
+              <span className="absolute left-0 -bottom-2 w-1/3 h-1 bg-[#f56a14] rounded-full" />
             </span>
           </h1>
 

@@ -1,6 +1,8 @@
 import { Inter, Cinzel } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import {Header} from "@/components/header"
+import { Footer} from "@/components/footer"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,8 +32,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${cinzel.variable}`}>
       <body className="font-sans antialiased">
+        <Header />
         {children}
         <Analytics />
+        <Footer/>
       </body>
     </html>
   )

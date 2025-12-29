@@ -19,10 +19,21 @@ import {
   ArrowLeft,
   Facebook,
   Linkedin,
+    Crown,
+  UserCog,
+  ClipboardList,
+    Landmark,
+  Gavel,
+  UsersRound,
+  PiggyBank,
+  FileCheck,
+  Scale
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { FaRegNewspaper } from "react-icons/fa";
+import { RiUserSettingsLine } from "react-icons/ri";
+import { MdOutlineManageHistory } from "react-icons/md";
+import { Button } from "@/components/ui/button";  
 import Image from "next/image";
-
 const programmesData = {
   undergraduate: {
     title: "UNDERGRADUATE",
@@ -143,46 +154,104 @@ const navigationItems = [
         {
           title: "Our University",
           items: [
+               {
+              label: "History",
+              href: "/about/history",
+              icon: MdOutlineManageHistory,
+            },
             {
               label: "Vision & Mission",
-              href: "/about#vision",
+              href: "/about/vision-mission",
               icon: GraduationCap,
             },
             {
               label: "History & Legacy",
-              href: "/about#history",
+              href: "/about/history",
               icon: BookOpen,
             },
-            { label: "Leadership", href: "/about#leadership", icon: Users },
-          ],
-        },
-        {
-          title: "Recognition",
-          items: [
-            {
-              label: "Approvals & Accreditations",
+                {
+              label: "Approvals",
               href: "/about#approvals",
               icon: FileText,
             },
-            { label: "Rankings", href: "/about#rankings", icon: GraduationCap },
-            {
-              label: "Achievements",
-              href: "/about#achievements",
-              icon: GraduationCap,
+                {
+              label: "Gazette Notification",
+              href: "/about#gazette",
+              icon: FaRegNewspaper,
             },
           ],
         },
+       {
+  title: "Leadership",
+  items: [
+    {
+      label: "President",
+      href: "/about/president",
+      icon: Crown,
+    },
+    {
+      label: "Vice Chancellor",
+      href: "/about/vice-chancellor",
+      icon: GraduationCap,
+    },
+    {
+      label: "Pro Vice Chancellor",
+      href: "/about/pro-vice-chancellor",
+      icon: RiUserSettingsLine, 
+    },
+    {
+      label: "Registrar",
+      href: "/about/registrar",
+      icon: ClipboardList,
+    },
+    {
+      label: "Control of Examination",
+      href: "/about/control-of-examination",
+      icon: UserCog,
+    },
+    {
+      label: "Officers of the University",
+      href: "/about/officers-of-the-university",
+      icon: Users, 
+    },
+  ],
+},
+
         {
-          title: "Connect",
-          items: [
-            {
-              label: "Why Choose SMDU",
-              href: "/about#why-smdu",
-              icon: GraduationCap,
-            },
-            { label: "Our Values", href: "/about#values", icon: BookOpen },
-          ],
-        },
+  title: "Government Bodies",
+  items: [
+    {
+      label: "Board of Governors",
+      href: "/about/board-of-governors",
+      icon: Landmark,
+    },
+    {
+      label: "Board of Management",
+      href: "/about/board-of-management",
+      icon: UsersRound,
+    },
+    {
+      label: "Admission Council",
+      href: "/about/admission-council",
+      icon: FileCheck,
+    },
+    {
+      label: "Finance Committee",
+      href: "/about/finance-committee",
+      icon: PiggyBank,
+    },
+    {
+      label: "Board of Examination",
+      href: "/about/board-of-examination",
+      icon: Scale,
+    },
+    {
+      label: "Academic Council",
+      href: "/about/academic-council",
+      icon: Gavel,
+    },
+  ],
+},
       ],
       featured: {
         title: "Discover SMDU",
@@ -793,7 +862,7 @@ export function Header() {
   ${megaHorizontalPosition[item.label] || "left-1/2 -translate-x-1/2"}
 `}
                       >
-                        <div className="w-196 bg-white rounded-xl shadow-2xl shadow-black/10 border border-grey-soft overflow-hidden">
+                        <div className="w-200 bg-white rounded-xl shadow-2xl shadow-black/10 border border-grey-soft overflow-hidden">
                           {/* Pattern Background */}
                           <div className="absolute inset-0 pattern-dots pointer-events-none" />
 
@@ -802,7 +871,7 @@ export function Header() {
                             {item.megaMenu.columns.map((column, idx) => (
                               <div
                                 key={idx}
-                                className="p-6 border-r border-grey-soft last:border-r-0"
+                                className="py-6 px-4 border-r border-grey-soft last:border-r-0"
                               >
                                 <h3 className="text-md font-bold text-[#F46B13] uppercase tracking-wider mb-4">
                                   {column.title}
