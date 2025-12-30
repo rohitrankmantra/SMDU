@@ -148,7 +148,7 @@ const programmesData = {
 const navigationItems = [
   {
     label: "About",
-    href: "/about",
+    href: "#",
     megaMenu: {
       columns: [
         {
@@ -191,7 +191,7 @@ const navigationItems = [
             },
             {
               label: "Pro Vice Chancellor",
-              href: "/about/pro-vice-chancellor",
+              href: "#",
               icon: RiUserSettingsLine,
             },
             {
@@ -206,7 +206,7 @@ const navigationItems = [
             },
             {
               label: "Officers of the University",
-              href: "/about/officers-of-the-university",
+              href: "#",
               icon: Users,
             },
           ],
@@ -217,12 +217,12 @@ const navigationItems = [
           items: [
             {
               label: "Board of Governors",
-              href: "/about/board-of-governors",
+              href: "/about/board-of-governor.pdf",
               icon: Landmark,
             },
             {
               label: "Board of Management",
-              href: "/about/board-of-management",
+              href: "#",
               icon: UsersRound,
             },
             {
@@ -237,14 +237,10 @@ const navigationItems = [
             },
             {
               label: "Board of Examination",
-              href: "/about/board-of-examination",
+              href: "#",
               icon: Scale,
             },
-            {
-              label: "Academic Council",
-              href: "/about/academic-council",
-              icon: Gavel,
-            },
+         
           ],
         },
       ],
@@ -252,8 +248,8 @@ const navigationItems = [
         title: "Discover SMDU",
         description:
           "Experience world-class education in a nurturing environment.",
-        image: "/university-campus-aerial.png",
-        link: "/about",
+        image: "/home/about2.jpeg",
+        link: "/contact",
       },
     },
   },
