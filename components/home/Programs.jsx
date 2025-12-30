@@ -12,25 +12,25 @@ const programs = [
   {
     title: "Engineering & Technology",
     courses: ["B.Tech", "M.Tech", "Ph.D"],
-    image: "/engineering-students-laboratory.jpg",
+    image: "/home/campus4.jpg",
     overlay: "from-[#f46b13]/70 to-black/60",
   },
   {
     title: "Management & Commerce",
     courses: ["BBA", "MBA", "B.Com"],
-    image: "/business-students-presentation.png",
+    image: "/home/review1.webp",
     overlay: "from-[#f46b13]/70 to-black/60",
   },
   {
     title: "Sciences & Research",
     courses: ["B.Sc", "M.Sc", "Ph.D"],
-    image: "/science-students-research-lab.jpg",
+    image: "/home/life3.jpg",
     overlay: "from-[#f46b13]/70 to-black/60",
   },
   {
     title: "Arts & Humanities",
     courses: ["BA", "MA", "Ph.D"],
-    image: "/arts-students-library-studying.jpg",
+    image: "/home/review3.webp",
     overlay: "from-[#f46b13]/70 to-black/60",
   },
 ]
@@ -63,7 +63,7 @@ export default function Programs() {
                   <img
                     src={program.image}
                     alt={program.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover bg-bottom group-hover:scale-110 transition-transform duration-500"
                   />
 
                   {/* <div

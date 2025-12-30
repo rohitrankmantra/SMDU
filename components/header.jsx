@@ -536,7 +536,7 @@ export function Header() {
         }`}
       >
         {/* Top Announcement Bar */}
-        <div className="bg-[#1a365d] text-white text-sm py-2 md:px-32 px-0">
+        <div className="bg-linear-to-r from-[#1a3491] to-[#d9363c] text-white text-sm py-2 md:px-32 px-0">
           <div className="container mx-auto px-4 flex justify-between items-center">
             {/* Scrolling Announcement */}
             <div className="flex items-center gap-4">
@@ -656,7 +656,7 @@ export function Header() {
         </div>
 
         {/* Main Navigation */}
-        <nav className="w-full bg-[#1A365D] hidden lg:block">
+        <nav className="w-full bg-linear-to-r from-[#1a3491] to-[#d9363c] hidden lg:block">
           <div className="flex items-center justify-center h-20 ">
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-1  ">

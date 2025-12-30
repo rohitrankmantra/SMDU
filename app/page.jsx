@@ -19,6 +19,7 @@ import CampusPreview from "../components/home/CampusPreview"
 import AccreditationsMarquee from "../components/home/AccreditationsMarquee"
 import StudentLife from "../components/home/StudentLife"
 import SchoolHighlights from "../components/home/SchoolHighlights"
+import StatsSection from "../components/home/StatsSection"
 
 // Animation variants
 const fadeInUp = {
@@ -41,6 +42,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen">
       <Hero/>
+      <StatsSection/>
       <About/>
       <Highlights/>
       <Programs/>
