@@ -140,7 +140,7 @@ export default function MediaPage() {
 
   return (
     <main className="min-h-screen">
-      <Header />
+    
 
       <PageHero
         title="Media Center"
@@ -437,7 +437,7 @@ export default function MediaPage() {
         </div>
       </section>
 
-      <Footer />
+      
     </main>
   )
 }
