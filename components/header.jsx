@@ -28,12 +28,17 @@ import {
   PiggyBank,
   FileCheck,
   Scale,
+  Video,
+  Mails,
+ CalendarDays,
+  TramFront,
 } from "lucide-react";
 import { FaRegNewspaper } from "react-icons/fa";
 import { RiUserSettingsLine } from "react-icons/ri";
 import { MdOutlineManageHistory } from "react-icons/md";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { ca } from "date-fns/locale";
 const programmesData = {
   undergraduate: {
     title: "UNDERGRADUATE",
@@ -400,86 +405,46 @@ const navigationItems = [
     },
   },
   {
-    label: "Campus",
-    href: "/campus",
-    megaMenu: {
-      columns: [
-        {
-          title: "Facilities",
-          items: [
-            {
-              label: "Infrastructure",
-              href: "/campus#infrastructure",
-              icon: Building2,
-            },
-            { label: "Libraries", href: "/campus#library", icon: BookOpen },
-            {
-              label: "Laboratories",
-              href: "/campus#labs",
-              icon: GraduationCap,
-            },
-          ],
-        },
-        {
-          title: "Student Life",
-          items: [
-            { label: "Hostels", href: "/campus#hostels", icon: Building2 },
-            { label: "Sports Complex", href: "/campus#sports", icon: Users },
-            { label: "Cafeteria", href: "/campus#cafeteria", icon: Users },
-          ],
-        },
-        {
-          title: "Explore",
-          items: [
-            { label: "Campus Map", href: "/campus#map", icon: Building2 },
-            { label: "Virtual Tour", href: "/campus#tour", icon: Camera },
-          ],
-        },
-      ],
-      featured: {
-        title: "Campus Life",
-        description:
-          "Experience vibrant campus life with world-class amenities.",
-        image: "/beautiful-university-campus-buildings.jpg",
-        link: "/campus",
-      },
-    },
-  },
-  {
-    label: "Media",
-    href: "/media",
+    label: "Media & Events",
+    href: "#",
     megaMenu: {
       columns: [
         {
           title: "News & Events",
           items: [
-            { label: "Latest News", href: "/media#news", icon: FileText },
-            { label: "Events Calendar", href: "/media#events", icon: BookOpen },
-            { label: "Notices", href: "/media#notices", icon: FileText },
+            { label: "Latest News", href: "/media/news-events", icon: Mails },
+            { label: "Blogs", href: "/media/blogs", icon: FileText },
+            { label: "Academic Calendar", href: "/media/academic-calendar", icon: CalendarDays },
+            {label: "List of Holidays", href: "media/list-of-holidays", icon: TramFront },
           ],
         },
         {
           title: "Gallery",
           items: [
-            { label: "Photo Gallery", href: "/media#gallery", icon: Camera },
-            { label: "Video Gallery", href: "/media#videos", icon: Camera },
+            { label: "Photo Gallery", href: "/media/photos", icon: Camera },
+            { label: "Video Gallery", href: "/media/videos", icon: Video },
           ],
         },
-        {
-          title: "Resources",
+         {
+          title: "Student Life",
           items: [
-            { label: "Press Releases", href: "/media#press", icon: FileText },
-            { label: "Downloads", href: "/media#downloads", icon: Download },
+            { label: "Student Life", href: "/media/student-life", icon: Users },
           ],
         },
+       
       ],
       featured: {
         title: "Stay Updated",
         description: "Keep up with the latest happenings at SMDU.",
-        image: "/university-event-celebration-students.jpg",
-        link: "/media",
+        image: "/home/campus11.jpeg",
+        link: "/contact",
       },
     },
+  },
+  {
+    label: "Career",
+    href: "/career",
+    megaMenu: null,
   },
   {
     label: "Contact",
