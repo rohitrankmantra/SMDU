@@ -163,7 +163,6 @@ const resources = [
 export default function AcademicsPage() {
   return (
     <main className="min-h-screen">
-      <Header />
 
       <PageHero
         title="Academic Excellence"
@@ -490,7 +489,6 @@ export default function AcademicsPage() {
         </div>
       </section>
 
-      <Footer />
     </main>
   )
 }

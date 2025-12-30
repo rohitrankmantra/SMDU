@@ -223,7 +223,6 @@ export default function AdmissionsPage() {
 
   return (
     <main className="min-h-screen">
-      <Header />
 
       <PageHero
         title="Admissions 2025-26"
@@ -843,7 +842,6 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      <Footer />
     </main>
   )
 }
