@@ -18,7 +18,7 @@ export const missionVisionData = [
     description:
       "Preserve and celebrate the cultural heritage of Uttarakhand while harmoniously blending it with modern education and global perspectives.",
     image:
-      "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70",
+      "/home/program1.jpeg",
   },
   {
     title: "Sustainability",
@@ -39,14 +39,14 @@ export const missionVisionData = [
     description:
       "Foster cross-cultural understanding, leadership, and compassion — preparing students to contribute responsibly to a connected world.",
     image:
-      "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b",
+      "/home/campus9.jpeg",
   },
   {
     title: "Continuous Improvement",
     description:
       "Adapt, innovate, and evolve with changing global education landscapes — ensuring quality, relevance, and excellence at every level.",
     image:
-      "https://images.unsplash.com/photo-1531482615713-2afd69097998",
+      "/home/campus11.jpeg",
   },
 ]
 export const missionData = [
