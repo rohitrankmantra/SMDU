@@ -202,7 +202,7 @@ const page = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3 }}
-                  className="relative overflow-hidden rounded-xl shadow-lg cursor-pointer group"
+                  className="relative overflow-hidden rounded-md shadow-lg cursor-pointer group"
                   onClick={() => openLightbox(image.path)}
                 >
                   <div className="aspect-square overflow-hidden relative">
