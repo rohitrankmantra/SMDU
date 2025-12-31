@@ -281,7 +281,7 @@ export default function AdmissionsPage() {
                   <div className="absolute top-0 right-0 w-20 h-20 bg-gold/5 rounded-bl-full" />
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-gold text-white flex items-center justify-center font-serif font-bold text-lg flex-shrink-0">
+                      <div className="w-12 h-12 rounded-full bg-gold text-white flex items-center justify-center font-serif font-bold text-lg shrink-0 ">
                         {step.step}
                       </div>
                       <div>
@@ -829,7 +829,7 @@ export default function AdmissionsPage() {
                   >
                     <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-grey-light text-left font-semibold text-text-dark">
                       <div className="flex items-center gap-3">
-                        <HelpCircle className="w-5 h-5 text-gold flex-shrink-0" />
+                        <HelpCircle className="w-5 h-5 text-gold shrink-0" />
                         {faq.question}
                       </div>
                     </AccordionTrigger>

@@ -23,7 +23,6 @@ import {
   UserCog,
   ClipboardList,
   Landmark,
-  Gavel,
   UsersRound,
   PiggyBank,
   FileCheck,
@@ -32,6 +31,9 @@ import {
   Mails,
  CalendarDays,
   TramFront,
+  ReceiptText,
+  MessageSquareMore,
+  FileSignature
 } from "lucide-react";
 import { FaRegNewspaper } from "react-icons/fa";
 import { RiUserSettingsLine } from "react-icons/ri";
@@ -273,24 +275,49 @@ const navigationItems = [
           items: [
             {
               label: "School of Engineering",
-              href: "/academics#engineering",
+              href: "/academics/engineering",
               icon: Building2,
             },
             {
-              label: "School of Management",
-              href: "/academics#management",
+              label: "School of Science And Technology",
+              href: "/academics/science-technology",
               icon: Users,
             },
-            {
-              label: "School of Sciences",
-              href: "/academics#sciences",
-              icon: BookOpen,
-            },
-            {
-              label: "School of Humanities",
-              href: "/academics#humanities",
-              icon: GraduationCap,
-            },
+            // {
+            //   label: "School of commerce and Management Studies",
+            //   href: "/academics/commerce-management",
+            //   icon: BookOpen,
+            // },
+            // {
+            //   label: "School of Agriculture",
+            //   href: "/academics/agriculture",
+            //   icon: GraduationCap,
+            // },
+            //    {
+            //   label: "School of Humanities",
+            //   href: "/academics/humanities",
+            //   icon: GraduationCap,
+            // },
+            //         {
+            //   label: "School of Yogic Science and Naturopathy",
+            //   href: "/academics/yogic-science-naturopathy",
+            //   icon: GraduationCap,
+            // },
+            //            {
+            //   label: "School of Nurshing Paramedical & Allied Science",
+            //   href: "/academics/nursing-paramedical-allied-science",
+            //   icon: GraduationCap,
+            // },
+            //            {
+            //   label: "School of Legal Studies",
+            //   href: "/academics/legal-studies",
+            //   icon: GraduationCap,
+            // },
+            //               {
+            //   label: "School of Hotel Management & Tourism",
+            //   href: "/academics/hotel-management-tourism",
+            //   icon: GraduationCap,
+            // },
           ],
         },
         {
@@ -345,27 +372,27 @@ const navigationItems = [
   },
   {
     label: "Admissions",
-    href: "/admissions",
+    href: "#",
     megaMenu: {
       columns: [
         {
           title: "Apply Now",
           items: [
-            {
-              label: "Admission Process",
-              href: "/admissions#process",
-              icon: FileText,
-            },
-            {
-              label: "Eligibility Criteria",
-              href: "/admissions#eligibility",
-              icon: GraduationCap,
-            },
-            {
-              label: "Fee Structure",
-              href: "/admissions#fees",
-              icon: BookOpen,
-            },
+             {
+    label: "Fee Structure",
+    href: "#",
+    icon: ReceiptText,
+  },
+  {
+    label: "Enquiry Form",
+    href: "/admissions/enquiry",
+    icon: MessageSquareMore,
+  },
+  {
+    label: "Registration Form",
+    href: "/admissions/registration",
+    icon: FileSignature,
+  },
           ],
         },
         {
@@ -373,17 +400,12 @@ const navigationItems = [
           items: [
             {
               label: "Scholarships",
-              href: "/admissions#scholarships",
+              href: "/admissions/scholarships",
               icon: GraduationCap,
             },
             {
-              label: "International Students",
-              href: "/admissions#international",
-              icon: Users,
-            },
-            {
               label: "Documents Required",
-              href: "/admissions#documents",
+              href: "/admissions/documents",
               icon: FileText,
             },
           ],
@@ -391,7 +413,7 @@ const navigationItems = [
         {
           title: "Support",
           items: [
-            { label: "FAQs", href: "/admissions#faq", icon: BookOpen },
+            { label: "FAQs", href: "/admissions/faq", icon: BookOpen },
             { label: "Contact Admissions", href: "/contact", icon: Phone },
           ],
         },
@@ -399,8 +421,8 @@ const navigationItems = [
       featured: {
         title: "Start Your Journey",
         description: "Take the first step towards a bright future at SMDU.",
-        image: "/happy-college-students-graduation.jpg",
-        link: "/admissions",
+        image: "/home/campus3.heic",
+        link: "/contact",
       },
     },
   },
@@ -412,10 +434,9 @@ const navigationItems = [
         {
           title: "News & Events",
           items: [
-            { label: "Latest News", href: "/media/news-events", icon: Mails },
+            { label: "News/Events", href: "/media/news-events", icon: Mails },
             { label: "Blogs", href: "/media/blogs", icon: FileText },
-            { label: "Academic Calendar", href: "/media/academic-calendar", icon: CalendarDays },
-            {label: "List of Holidays", href: "media/list-of-holidays", icon: TramFront },
+           
           ],
         },
         {
@@ -426,9 +447,10 @@ const navigationItems = [
           ],
         },
          {
-          title: "Student Life",
+          title: "Calendars",
           items: [
-            { label: "Student Life", href: "/media/student-life", icon: Users },
+            { label: "Academic Calendar", href: "/home/academic-calendar.pdf", icon: CalendarDays },
+            {label: "List of Holidays", href: "#", icon: TramFront },
           ],
         },
        
