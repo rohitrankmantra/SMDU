@@ -442,14 +442,14 @@ const navigationItems = [
         {
           title: "Gallery",
           items: [
-            { label: "Photo Gallery", href: "/media/photos", icon: Camera },
-            { label: "Video Gallery", href: "/media/videos", icon: Video },
+            { label: "Photo Gallery", href: "/media/image-gallery", icon: Camera },
+            { label: "Video Gallery", href: "/media/video-gallery", icon: Video },
           ],
         },
          {
           title: "Calendars",
           items: [
-            { label: "Academic Calendar", href: "/home/academic-calendar.pdf", icon: CalendarDays },
+            { label: "Academic Calendar", href: "/news/academic-calendar.pdf", icon: CalendarDays },
             {label: "List of Holidays", href: "#", icon: TramFront },
           ],
         },
