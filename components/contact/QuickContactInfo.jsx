@@ -42,9 +42,9 @@ const items = [
 
 export default function QuickContactInfo() {
   return (
-    <section className="relative py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+    <section className="relative py-24 bg-linear-to-b from-gray-50 to-white overflow-hidden">
       {/* subtle pattern */}
-      <div className="absolute inset-0 pattern-grid opacity-5" />
+      <div className="absolute inset-0 pattern-lines opacity-5" />
 
       {/* FULL WIDTH WRAPPER */}
       <div className="relative z-10 px-6 lg:px-14 xl:px-20">
