@@ -134,7 +134,7 @@ const page = () => {
       {/* ================= GALLERY SECTION ================= */}
       <section className="relative py-20 bg-white overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 pattern-lines opacity-5" />
+        <div className="absolute inset-0 pattern-grid opacity-5" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4">
 
