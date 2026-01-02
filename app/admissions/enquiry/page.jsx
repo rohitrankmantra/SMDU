@@ -1,6 +1,6 @@
 import React from 'react'
 import { PageHero } from '@/components/page-hero';
-import EnquiryForm from '../../../components/enquiry/page';
+import EnquiryForm from '../../../components/enquiry/EnquiryForm';
 
 const page = () => {
   return (

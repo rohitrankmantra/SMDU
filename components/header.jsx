@@ -29,11 +29,11 @@ import {
   Scale,
   Video,
   Mails,
- CalendarDays,
+  CalendarDays,
   TramFront,
   ReceiptText,
   MessageSquareMore,
-  FileSignature
+  FileSignature,
 } from "lucide-react";
 import { FaRegNewspaper } from "react-icons/fa";
 import { RiUserSettingsLine } from "react-icons/ri";
@@ -247,7 +247,6 @@ const navigationItems = [
               href: "#",
               icon: Scale,
             },
-         
           ],
         },
       ],
@@ -378,34 +377,34 @@ const navigationItems = [
         {
           title: "Apply Now",
           items: [
-             {
-    label: "Fee Structure",
-    href: "#",
-    icon: ReceiptText,
-  },
-  {
-    label: "Enquiry Form",
-    href: "/admissions/enquiry",
-    icon: MessageSquareMore,
-  },
-  {
-    label: "Registration Form",
-    href: "/admissions/registration",
-    icon: FileSignature,
-  },
+            {
+              label: "Admission Form",
+              href: "/admissions/admission-form.pdf",
+              icon: FileSignature,
+            },
+            {
+              label: "Enquiry Form",
+              href: "/admissions/enquiry",
+              icon: MessageSquareMore,
+            },
+            {
+              label: "Registration Form",
+              href: "/admissions/registration",
+              icon: FileSignature,
+            },
           ],
         },
         {
           title: "Information",
           items: [
             {
-              label: "Scholarships",
-              href: "/admissions/scholarships",
-              icon: GraduationCap,
+              label: "Fee Structure",
+              href: "#",
+              icon: ReceiptText,
             },
             {
-              label: "Documents Required",
-              href: "/admissions/documents",
+              label: "Courses Requirements",
+              href: "/admissions/courses-requirements",
               icon: FileText,
             },
           ],
@@ -413,7 +412,7 @@ const navigationItems = [
         {
           title: "Support",
           items: [
-            { label: "FAQs", href: "/admissions/faq", icon: BookOpen },
+            { label: "FAQs", href: "/admissions/faqs", icon: BookOpen },
             { label: "Contact Admissions", href: "/contact", icon: Phone },
           ],
         },
@@ -436,24 +435,34 @@ const navigationItems = [
           items: [
             { label: "News/Events", href: "/media/news-events", icon: Mails },
             { label: "Blogs", href: "/media/blogs", icon: FileText },
-           
           ],
         },
         {
           title: "Gallery",
           items: [
-            { label: "Photo Gallery", href: "/media/image-gallery", icon: Camera },
-            { label: "Video Gallery", href: "/media/video-gallery", icon: Video },
+            {
+              label: "Photo Gallery",
+              href: "/media/image-gallery",
+              icon: Camera,
+            },
+            {
+              label: "Video Gallery",
+              href: "/media/video-gallery",
+              icon: Video,
+            },
           ],
         },
-         {
+        {
           title: "Calendars",
           items: [
-            { label: "Academic Calendar", href: "/news/academic-calendar.pdf", icon: CalendarDays },
-            {label: "List of Holidays", href: "#", icon: TramFront },
+            {
+              label: "Academic Calendar",
+              href: "/news/academic-calendar.pdf",
+              icon: CalendarDays,
+            },
+            { label: "List of Holidays", href: "#", icon: TramFront },
           ],
         },
-       
       ],
       featured: {
         title: "Stay Updated",
@@ -609,18 +618,25 @@ export function Header() {
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <Button className="bg-[#f97316] hover:bg-[#ea580c] text-white font-semibold px-6 rounded-full">
+                  <Link
+                    href="/admissions/enquiry"
+                    className="bg-[#f97316] hover:bg-[#ea580c] text-sm text-white py-2 font-semibold px-6 rounded-full"
+                  >
                     Enquiry Form
-                  </Button>
+                  </Link>
                   {/* <Link href="/fee-payment" className="text-[#0891b2] text-xs hover:underline mt-1 whitespace-nowrap">
                     Click here for Fee Payment
                   </Link> */}
                 </div>
 
                 {/* Ph.D Admissions Button */}
-                <Button className="bg-[#f97316] hover:bg-[#ea580c] text-white font-semibold px-6 rounded-full shrink-0">
+                <Link
+                  target="_blank"
+                  href="/admissions/phdadmission.pdf"
+                  className="bg-[#f97316] hover:bg-[#ea580c] text-sm text-white py-2 font-semibold px-6 rounded-full shrink-0"
+                >
                   Ph.D Admissions 2025
-                </Button>
+                </Link>
               </div>
 
               {/* Mobile Menu Button */}
