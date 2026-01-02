@@ -25,7 +25,7 @@ export default function EnquiryForm() {
   }
 
   return (
-    <section className="relative py-24 lg:py-32 bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
+    <section className="relative py-24 lg:py-32 bg-linear-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
 
       {/* Elegant geometric pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(29,78,216,0.08),transparent_40%),radial-gradient(circle_at_90%_10%,rgba(147,197,253,0.25),transparent_40%)]" />
@@ -41,7 +41,7 @@ export default function EnquiryForm() {
             <ChevronRight className="w-3 h-3" />
           </div>
 
-          <h2 className="text-5xl lg:text-6xl font-extrabold mt-6 bg-gradient-to-r from-gray-900 to-blue-700 bg-clip-text text-transparent">
+          <h2 className="text-5xl lg:text-6xl font-extrabold mt-6 bg-linear-to-r from-gray-900 to-blue-700 bg-clip-text text-transparent">
             Enquiry Form
           </h2>
 
@@ -50,7 +50,7 @@ export default function EnquiryForm() {
             Submit your enquiry and our admissions team will connect with you shortly.
           </p>
 
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-yellow-400 mx-auto mt-8 rounded-full" />
+          <div className="w-24 h-1 bg-linear-to-r from-blue-500 to-yellow-400 mx-auto mt-8 rounded-full" />
         </div>
 
         {/* Form Card */}
@@ -60,7 +60,7 @@ export default function EnquiryForm() {
 
             {submitted ? (
               <div className="text-center py-12">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                <div className="w-20 h-20 bg-linear-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
                   <Send className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-3">Thank You!</h3>
@@ -144,7 +144,7 @@ export default function EnquiryForm() {
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-gradient-to-r from-blue-700 to-blue-500 text-white rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all flex justify-center items-center gap-2"
+                  className="w-full py-4 bg-linear-to-r from-blue-700 to-blue-500 text-white rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all flex justify-center items-center gap-2"
                 >
                   <Send className="w-5 h-5" />
                   Send Enquiry
