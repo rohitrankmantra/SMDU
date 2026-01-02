@@ -7,154 +7,130 @@ import {
   Phone,
   Mail,
   Clock,
-  ChevronRight,
 } from "lucide-react"
 
 const items = [
   {
     icon: MapPin,
-    title: "Visit Us",
-    content: "Smt. Manjira Devi University, Uttarkashi (श्रीमती मंजीरा देवी विश्वविद्यालय, उत्तरकाशी)\nRukmani Nagar, Hitanu Dhanari, Dunda, Uttarkashi, Hitaru, Uttarakhand 249151",
-    link: "#location",
+    title: "University Campus",
+    content:
+      "Smt. Manjira Devi University (SMDU)\nRukmani Nagar, Hitanu Dhanari,\nDunda, Uttarkashi, Uttarakhand – 249151",
+    link: null,
   },
   {
     icon: Phone,
-    title: "Call Us",
-    content: "+91 80063-45557 ",
+    title: "HR Contact",
+    content: "+91 80063-45557",
     subContent: "+91 80063-45558",
     link: "tel:+918006345557",
   },
   {
     icon: Mail,
-    title: "Email Us",
-    content: "General: info@smdu.edu.in",
-    subContent: "Admissions: admissioncell@smdu.edu.in",
-    link: "mailto:info@smdu.edu.in",
+    title: "Careers Email",
+    content: "careers@smdu.edu.in",
+    subContent: "For faculty & non-teaching positions",
+    link: "mailto:careers@smdu.edu.in",
   },
   {
     icon: Clock,
-    title: "Office Hours",
-    content: "Mon - Sat: 9:00 AM - 5:00 PM",
+    title: "Working Hours",
+    content: "Mon – Sat: 10:00 AM – 4:00 PM",
     subContent: "Sunday: Closed",
-    link: "#hours",
+    link: null,
   },
 ]
 
 export default function QuickContactInfo() {
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section className="relative py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+      {/* subtle pattern */}
+      <div className="absolute inset-0 pattern-grid opacity-5" />
 
-      {/* subtle dot texture */}
-      <div className="absolute inset-0 pattern-dots opacity-20" />
-
-      <div className=" mx-auto px-6 relative z-10">
+      {/* FULL WIDTH WRAPPER */}
+      <div className="relative z-10 px-6 lg:px-14 xl:px-20">
 
         {/* ===== HEADER ===== */}
         <motion.div
-          className="text-center mb-20"
-          initial={{ opacity: 0, y: 24 }}
+          className="text-center mb-18"
+          initial={{ opacity: 0, y: 22 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block px-6 py-2 mb-5 rounded-full
-            bg-[#EA580C]/10 text-[#f97316]
-            text-sm font-semibold tracking-wide">
-            QUICK CONNECT
+          <span className="inline-block px-6 py-2 mb-5 rounded-full bg-orange-100 text-orange-600 text-xs font-bold tracking-wider">
+            CAREER CONNECT
           </span>
 
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#0F172A] mb-4">
-            Get in Touch With Us
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Career Opportunities at SMDU
           </h2>
 
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Reach out to our team for admissions, campus visits, or general
-            inquiries.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Connect with our HR team for faculty, administrative, and staff
+            positions at Smt. Manjira Devi University.
           </p>
         </motion.div>
 
-        {/* ===== GRID ===== */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* ===== FULL WIDTH GRID ===== */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {items.map((item, index) => {
             const Icon = item.icon
+            const hasLink = Boolean(item.link)
 
             return (
-              <motion.div
+              <motion.a
                 key={index}
-                initial={{ opacity: 0, y: 28 }}
+                href={item.link || undefined}
+                className={hasLink ? "block" : "pointer-events-none"}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
-                whileHover={{ y: -10 }}
+                whileHover={hasLink ? { y: -8 } : {}}
               >
                 <Card
-                  className="group relative h-full
-                  rounded-t-4xl rounded-b-2xl
-                  bg-white/60 backdrop-blur-xl
-                  border border-white/70
-                  shadow-lg hover:shadow-2xl
+                  className="group h-full bg-white
+                  rounded-3xl
+                  border border-gray-100
+                  border-b-4 border-b-orange-500
+                  shadow-md hover:shadow-2xl
                   transition-all duration-300"
                 >
-                  {/* top accent strip */}
-                  <div className="absolute top-0 left-0 w-full h-1.5 bg-[#f97316] rounded-t-4xl" />
-
-                  <CardContent className="p-8 text-center h-full flex flex-col">
-
+                  <CardContent className="p-8 text-center flex flex-col h-full">
                     {/* icon */}
                     <div
-                      className="w-16 h-16 mx-auto mb-6 rounded-2xl
-                      bg-white/70 backdrop-blur
-                      border border-white/60
-                      shadow-sm
-                      flex items-center justify-center
-                      group-hover:bg-[#EA580C]/15 transition"
+                      className="w-14 h-14 mx-auto mb-6 rounded-2xl
+                      bg-orange-50 flex items-center justify-center
+                      group-hover:bg-orange-100 transition"
                     >
-                      <Icon className="w-7 h-7 text-[#f97316]" />
+                      <Icon className="w-7 h-7 text-orange-600" />
                     </div>
 
-                    <h3 className="font-serif font-semibold text-xl text-[#0F172A] mb-3">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
                       {item.title}
                     </h3>
 
-                    <p className="text-sm text-slate-600 leading-relaxed">
+                    <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-line">
                       {item.content}
                     </p>
 
                     {item.subContent && (
-                      <p className="text-sm text-slate-500 mt-1">
+                      <p className="text-sm text-gray-500 mt-3">
                         {item.subContent}
                       </p>
                     )}
 
-                    {/* CTA
-                    <button
-                      onClick={() => {
-                        if (
-                          item.link?.startsWith("tel:") ||
-                          item.link?.startsWith("mailto:")
-                        ) {
-                          window.location.href = item.link
-                        } else {
-                          document
-                            .querySelector(item.link)
-                            ?.scrollIntoView({ behavior: "smooth" })
-                        }
-                      }}
-                      className="mt-auto pt-6 inline-flex items-center justify-center
-                      text-sm font-semibold text-[#EA580C]
-                      hover:text-[#c2410c] transition"
-                    >
-                      Connect Now
-                      <ChevronRight className="w-4 h-4 ml-1" />
-                    </button> */}
-
+                    {hasLink && (
+                      <span className="mt-auto pt-6 text-sm font-medium text-orange-600 opacity-0 group-hover:opacity-100 transition-opacity">
+                        Contact Now →
+                      </span>
+                    )}
                   </CardContent>
                 </Card>
-              </motion.div>
+              </motion.a>
             )
           })}
         </div>
-
       </div>
     </section>
   )
