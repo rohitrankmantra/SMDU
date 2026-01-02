@@ -74,12 +74,12 @@ export default function SchoolHighlights() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -6 }}
-              className="group relative flex bg-white rounded-3xl overflow-hidden
+              className="group relative flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden
               border border-gray-200 shadow-lg hover:shadow-2xl
               transition-all duration-500"
             >
               {/* IMAGE */}
-              <div className="relative w-44 shrink-0 overflow-hidden">
+              <div className="relative w-full md:w-44 h-48 md:h-auto shrink-0 overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.title}
