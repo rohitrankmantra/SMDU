@@ -45,7 +45,7 @@ export default function HomePage() {
       <Highlights/>
       <Programs/>
       <CTA/>
-      <NewsSection/>
+      {/* <NewsSection/> */}
       <SchoolHighlights/>
       <AccreditationsMarquee/>
       <StudentLife/>
