@@ -8,7 +8,7 @@ const Page = () => {
   const [activeBlog, setActiveBlog] = useState(null);
 
   return (
-    <section className="max-w-6xl mx-auto py-10 px-4">
+    <section className="max-w-6xl mx-auto py-16 px-4">
       {/* BLOG LIST */}
       {!activeBlog ? (
         <>

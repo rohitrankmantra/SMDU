@@ -501,6 +501,14 @@ const megaHorizontalPosition = {
   Campus: "left-1/2 -translate-x-1/2",
 };
 
+const toSlug = (text) =>
+  text
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[()]/g, "")
+    .replace(/[^a-z0-9-]/g, "");
+
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
@@ -717,9 +725,7 @@ export function Header() {
                                           (program, pIdx) => (
                                             <li key={pIdx}>
                                               <Link
-                                                href={`/academics?program=${encodeURIComponent(
-                                                  program
-                                                )}`}
+                                                 href={`/programmes/${toSlug(program)}`}
                                                 className="text-sm text-[#f46b13] hover:underline transition"
                                               >
                                                 {program}
@@ -752,9 +758,7 @@ export function Header() {
                                           (program, pIdx) => (
                                             <li key={pIdx}>
                                               <Link
-                                                href={`/academics?program=${encodeURIComponent(
-                                                  program
-                                                )}`}
+                                                href={`/programmes/${toSlug(program)}`}
                                                 className="text-sm text-[#f46b13] hover:underline transition"
                                               >
                                                 {program}
@@ -787,9 +791,7 @@ export function Header() {
                                           (program, pIdx) => (
                                             <li key={pIdx}>
                                               <Link
-                                                href={`/academics?program=${encodeURIComponent(
-                                                  program
-                                                )}`}
+                                               href={`/programmes/${toSlug(program)}`}
                                                 className="text-sm text-[#f46b13] hover:underline transition"
                                               >
                                                 {program}
@@ -822,9 +824,7 @@ export function Header() {
                                           (program, pIdx) => (
                                             <li key={pIdx}>
                                               <Link
-                                                href={`/academics?program=${encodeURIComponent(
-                                                  program
-                                                )}`}
+                                               href={`/programmes/${toSlug(program)}`}
                                                 className="text-sm text-[#f46b13] hover:underline transition"
                                               >
                                                 {program}
@@ -1037,9 +1037,7 @@ export function Header() {
                                                 (program, pIdx) => (
                                                   <Link
                                                     key={pIdx}
-                                                    href={`/academics?program=${encodeURIComponent(
-                                                      program
-                                                    )}`}
+                                                    href={`/programmes/${toSlug(program)}`}
                                                     onClick={() =>
                                                       setIsMobileMenuOpen(false)
                                                     }
