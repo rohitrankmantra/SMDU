@@ -65,7 +65,7 @@ const programmesData = {
       },
       {
         name: "School of Yogic Science and Naturopathy",
-        programs: ["BNYS", "BSC"],
+        programs: ["BNYS", "B.Sc Yogic Science"],
       },
       {
         name: "School of Nursing Paramedical & Allied Science",
@@ -102,7 +102,7 @@ const programmesData = {
       },
       {
         name: "School of Yogic Science and Naturopathy",
-        programs: ["M.A", "M.Sc"],
+        programs: ["M.A Yogic Science", "M.Sc Yogic Science"],
       },
     ],
   },
@@ -112,9 +112,9 @@ const programmesData = {
       {
         name: "School of Engineering",
         programs: [
-          "Diploma - Civil Engineering",
-          "Diploma - Mechanical Engineering",
-          "Diploma - Computer Science & Engineering",
+          "Diploma-Civil Engineering",
+          "Diploma-Mechanical Engineering",
+          "Diploma-Computer Science & Engineering",
         ],
       },
       {
@@ -133,7 +133,7 @@ const programmesData = {
       },
       {
         name: "School of Hotel Management & Tourism",
-        programs: ["Diploma - Hotel Management"],
+        programs: ["Diploma-Hotel Management"],
       },
     ],
   },
@@ -142,13 +142,13 @@ const programmesData = {
     schools: [
       {
         name: "School Of Commerce And Management Studies",
-        programs: ["Ph.D"],
+        programs: ["Ph.D Commerce Management"],
       },
       {
         name: "School of Arts and Humanities",
-        programs: ["Ph.D"],
+        programs: ["Ph.D Arts"],
       },
-    ],
+    ]
   },
 };
 
