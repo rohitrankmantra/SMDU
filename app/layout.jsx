@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import {Header} from "@/components/header"
 import { Footer} from "@/components/footer"
+import { FloatingActionPanel } from './../components/FloatingActionPanel';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
       <body className="font-sans antialiased">
         <Header />
         {children}
+        <FloatingActionPanel/>
         <Analytics />
         <Footer/>
       </body>
