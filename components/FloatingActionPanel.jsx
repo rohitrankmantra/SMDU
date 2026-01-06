@@ -7,6 +7,7 @@ import {
   Mail,
   MessageCircle,
 } from "lucide-react";
+import { BiLogoWhatsapp } from "react-icons/bi";
 
 const actions = [
   {
@@ -21,8 +22,8 @@ const actions = [
     href: "https://wa.me/918006345557",
     color: "bg-green-500",
     hover: "hover:bg-green-600",
-    icon: PhoneCall,
-    external: true,
+    icon: BiLogoWhatsapp,
+    external: false,
   },
   {
     label: "Call Us",
@@ -40,7 +41,7 @@ const actions = [
   },
   {
     label: "Chat Enquiry",
-    href: "/admissions/enquiry",
+    href: "/contact",
     color: "bg-purple-600",
     hover: "hover:bg-purple-700",
     icon: MessageCircle,
