@@ -32,15 +32,20 @@ import {
   CalendarDays,
   TramFront,
   ReceiptText,
-  MessageSquareMore,
   FileSignature,
+    MessageSquareMore,
+  ShieldCheck,
+  CigaretteOff
 } from "lucide-react";
 import { FaRegNewspaper } from "react-icons/fa";
 import { RiUserSettingsLine } from "react-icons/ri";
 import { MdOutlineManageHistory } from "react-icons/md";
+import { IoWomanOutline } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { ca } from "date-fns/locale";
+import { LuBookAudio } from "react-icons/lu";
+import { VscLaw } from "react-icons/vsc";
+import { CiLocationArrow1 } from "react-icons/ci";
 const programmesData = {
   undergraduate: {
     title: "UNDERGRADUATE",
@@ -270,102 +275,98 @@ const navigationItems = [
     megaMenu: {
       columns: [
         {
-          title: "Schools & Departments",
+          title: "Our Schools",
           items: [
             {
               label: "School of Engineering",
-              href: "/academics/engineering",
-              icon: Building2,
+              href: "/academics/school-of-engineering",
             },
             {
-              label: "School of Science And Technology",
-              href: "/academics/science-technology",
-              icon: Users,
-            },
-            // {
-            //   label: "School of commerce and Management Studies",
-            //   href: "/academics/commerce-management",
-            //   icon: BookOpen,
-            // },
-            // {
-            //   label: "School of Agriculture",
-            //   href: "/academics/agriculture",
-            //   icon: GraduationCap,
-            // },
-            //    {
-            //   label: "School of Humanities",
-            //   href: "/academics/humanities",
-            //   icon: GraduationCap,
-            // },
-            //         {
-            //   label: "School of Yogic Science and Naturopathy",
-            //   href: "/academics/yogic-science-naturopathy",
-            //   icon: GraduationCap,
-            // },
-            //            {
-            //   label: "School of Nurshing Paramedical & Allied Science",
-            //   href: "/academics/nursing-paramedical-allied-science",
-            //   icon: GraduationCap,
-            // },
-            //            {
-            //   label: "School of Legal Studies",
-            //   href: "/academics/legal-studies",
-            //   icon: GraduationCap,
-            // },
-            //               {
-            //   label: "School of Hotel Management & Tourism",
-            //   href: "/academics/hotel-management-tourism",
-            //   icon: GraduationCap,
-            // },
-          ],
-        },
-        {
-          title: "Programs",
-          items: [
-            {
-              label: "Undergraduate Programs",
-              href: "/academics#ug",
-              icon: GraduationCap,
+              label: "School of Science and Technology",
+              href: "/academics/school-of-science-and-technology",
             },
             {
-              label: "Postgraduate Programs",
-              href: "/academics#pg",
-              icon: GraduationCap,
+              label: "School of Commerce and Management Studies",
+              href: "/academics/school-of-commerce-and-management-studies",
             },
             {
-              label: "Doctoral Programs",
-              href: "/academics#phd",
-              icon: BookOpen,
+              label: "School of Agriculture",
+              href: "/academics/school-of-agriculture",
+            },
+            {
+              label: "School of Arts",
+              href: "/academics/school-of-arts",
             },
           ],
         },
         {
-          title: "Resources",
+          title: "",
           items: [
             {
-              label: "Research & Publications",
-              href: "/academics#research",
-              icon: FileText,
+              label: "School of Yoga Science and Naturopathy",
+              href: "/academics/school-of-yoga-science-and-naturopathy",
             },
             {
-              label: "Academic Calendar",
-              href: "/academics#calendar",
-              icon: BookOpen,
+              label: "School of Nursing, Paramedical & Applied Science",
+              href: "/academics/school-of-nursing-paramedical-and-applied-science",
             },
             {
-              label: "Syllabus Downloads",
-              href: "/academics#syllabus",
-              icon: Download,
+              label: "School of Legal",
+              href: "/academics/school-of-legal",
+            },
+            {
+              label: "School of Hotel Management and Tourism",
+              href: "/academics/school-of-hotel-management-and-tourism",
             },
           ],
         },
+        {
+  title: "Academic Resources",
+  items: [
+    {
+      label: "Student Feedback",
+      href: "/academics/student-feedback",
+      icon: MessageSquareMore, 
+    },
+    {
+      label: "Woman Cell",
+      href: "/academics/woman-cell",
+      icon: IoWomanOutline, 
+    },
+    {
+      label: "Anti-Ragging Cell",
+      href: "/academics/anti-ragging-cell",
+      icon: ShieldCheck, 
+    },
+    {
+      label: "Anti-Drug Cell",
+      href: "/academics/anti-drug-cell",
+      icon: CigaretteOff, 
+    },
+    {
+      label: "Grievance Redressal Cell",
+      href: "/academics/grievance-redressal-cell",
+      icon: ClipboardList, 
+    },
+    {
+      label: "Anti Disciplinary Committee",
+      href: "/academics/anti-disciplinary-committee",
+      icon: VscLaw,
+    },
+    {
+      label: "Right to Information",
+      href: "/academics/right-to-information",
+      icon: LuBookAudio,
+    },
+  ],
+}
       ],
       featured: {
-        title: "Academic Excellence",
+        title: "ACADEMIC EXCELLENCE",
         description:
           "Explore our diverse range of programs designed for tomorrow's leaders.",
         image: "/university-classroom-students-learning.jpg",
-        link: "/academics",
+        link: "/academics/learn-more",
       },
     },
   },
@@ -887,7 +888,7 @@ export function Header() {
                                         }
                                         className="flex items-center gap-2  font-cenzil  py-2 text-sm text-gray-600y hover:text-[#F46B13] transition-colors group"
                                       >
-                                        <subItem.icon className="w-6 h-6 text-[#F46B13]/60 group-hover:text-[#F46B13] transition-colors" />
+                                        {subItem.icon && <subItem.icon className="w-6 h-6 text-[#F46B13]/60 group-hover:text-[#F46B13] transition-colors" />}
                                         {subItem.label}
                                       </Link>
                                     </li>
