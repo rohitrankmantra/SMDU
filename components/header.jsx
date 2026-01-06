@@ -487,7 +487,7 @@ const navigationItems = [
 
 const topBarLinks = [
   { label: "IQAC", href: "/iqac" },
-  { label: "EVENTS", href: "/events" },
+  { label: "EVENTS", href: "/media/news-events" },
   { label: "LOGIN", href: "/login" },
   { label: "CAREER", href: "/career" },
   { label: "ALUMNI", href: "/alumni" },
