@@ -61,7 +61,7 @@ export default function CampusPreview() {
 
   return (
     <section className="py-20 bg-white relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative ">
         <SectionHeading
           subtitle="Our Campus"
           title="Experience World-Class Facilities"
@@ -97,7 +97,7 @@ export default function CampusPreview() {
         <AnimatePresence>
           {lightboxOpen && (
             <motion.div
-              className="fixed inset-0 bg-black/90 backdrop-blur-lg z-50 flex items-center justify-center"
+              className="fixed inset-0 bg-black/90 backdrop-blur-lg z-999 flex items-center justify-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}

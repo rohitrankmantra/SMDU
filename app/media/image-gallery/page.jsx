@@ -136,7 +136,7 @@ const page = () => {
         {/* Background Pattern */}
         <div className="absolute inset-0 pattern-grid opacity-5" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4">
+        <div className="relative  max-w-7xl mx-auto px-4">
 
           {/* Heading */}
           <div className="text-center mb-14">
