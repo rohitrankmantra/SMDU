@@ -32,25 +32,25 @@ const highlights = [
     icon: GraduationCap,
     title: "Academic Excellence",
     description: "World-class curriculum designed by industry experts and academicians.",
-    link: "/academics",
+    link: "/contact",
   },
   {
     icon: Building2,
     title: "Modern Infrastructure",
     description: "State-of-the-art facilities including smart classrooms and advanced labs.",
-    link: "/campus",
+    link: "/contact",
   },
   {
     icon: Users,
     title: "Expert Faculty",
     description: "Learn from distinguished professors with vast industry experience.",
-    link: "/about#leadership",
+    link: "/contact",
   },
   {
     icon: Award,
     title: "Placements",
     description: "95% placement record with top recruiters from across industries.",
-    link: "/academics#placements",
+    link: "/contact",
   },
 ]
 

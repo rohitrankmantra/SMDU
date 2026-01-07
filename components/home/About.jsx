@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Award, Users } from "lucide-react"
 import { SectionHeading } from "@/components/section-heading"
+import Link from "next/link"
 
 export default function About() {
   return (
@@ -116,10 +117,10 @@ export default function About() {
             </div>
 
             {/* CTA */}
-            <Button className="bg-[#f46b13] hover:bg-[#e35c00] text-white">
+            <Link href="/about/history" className="bg-[#f46b13] text-sm hover:bg-[#e35c00] text-white px-6 py-3 rounded-xl inline-flex items-center font-semibold  hover:shadow-[#f46b13]/40 transition  ">
               Discover Our Story
               <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+            </Link>
           </motion.div>
         </div>
       </div>

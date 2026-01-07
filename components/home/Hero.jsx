@@ -106,6 +106,7 @@ export default function Hero({
               className="flex flex-wrap gap-5"
             >
               <Button
+                onClick={() => window.location.href = '/admissions/enquiry'}
                 size="lg"
                 className="bg-[#f46b13] hover:bg-[#e35c00] 
                 text-white px-9 py-6 rounded-xl 

@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function CTA() {
   return (
@@ -27,25 +28,24 @@ export default function CTA() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                size="lg"
-                className="bg-white text-[#f46b13] hover:bg-grey-light"
-              >
+              <Link
+                href="/admissions/enquiry"
+               className="bg-white text-[#f46b13] hover:bg-grey-light px-4 py-1 rounded-lg text-sm font-medium inline-flex items-center justify-center gap-2 h-12  ">
                 Apply Now
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
+              </Link>
 
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white/10 bg-transparent"
+              <Link
+                href="/admissions/Bronchure.pdf"
+                target="_blank"
+                className="bg-white text-[#f46b13] hover:bg-grey-light px-4 py-1 rounded-lg text-sm font-medium inline-flex items-center justify-center gap-2 h-12  "
               >
                 Download Prospectus
-              </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }
