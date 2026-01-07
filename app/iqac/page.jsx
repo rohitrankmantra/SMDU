@@ -55,17 +55,20 @@ const page = () => {
   ];
   return (
     <>
-      <section className="w-full py-16 bg-[#FD5F00]">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Internal Quality Assurance Cell (IQAC)
-          </h2>
+      <section className="w-full py-10 bg-gray-50">
+  <div className="max-w-4xl mx-auto px-4">
+    <div className="bg-[#FD5F00] backdrop-blur-md rounded-2xl p-6 sm:p-8 md:p-10 text-center">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+        Internal Quality Assurance Cell (IQAC)
+      </h2>
 
-          <p className="text-white text-md md:text-xl leading-relaxed">
-            Smt. Manjira Devi University, Uttarkashi (Uttarakhand)
-          </p>
-        </div>
-      </section>
+      <p className="text-white text-sm sm:text-md md:text-xl leading-relaxed">
+        Smt. Manjira Devi University, Uttarkashi (Uttarakhand)
+      </p>
+    </div>
+  </div>
+</section>
+
       {/*------------------------------------------------------------ Section 2 --------------------------------------------*/}
 
       <section className="w-full py-16 bg-gray-50">
