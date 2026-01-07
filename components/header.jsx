@@ -234,7 +234,7 @@ const navigationItems = [
             },
             {
               label: "Board of Management",
-              href: "#",
+              href: "/about/board-of-management",
               icon: UsersRound,
             },
             {
