@@ -44,8 +44,9 @@ import { IoWomanOutline } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { LuBookAudio } from "react-icons/lu";
-import { VscLaw } from "react-icons/vsc";
-import { CiLocationArrow1 } from "react-icons/ci";
+import { VscServerProcess } from "react-icons/vsc";
+import { GiAirplaneDeparture } from "react-icons/gi";
+import { CiLocationArrow1 } from 'react-icons/ci';
 const programmesData = {
   undergraduate: {
     title: "UNDERGRADUATE",
@@ -248,8 +249,8 @@ const navigationItems = [
               icon: PiggyBank,
             },
             {
-              label: "Board of Examination",
-              href: "#",
+              label: "Internal Complain Committee",
+              href: "/about/internal-complain-committee",
               icon: Scale,
             },
           ],
@@ -348,11 +349,7 @@ const navigationItems = [
       href: "/academics/grievance-redressal-cell",
       icon: ClipboardList, 
     },
-    {
-      label: "Anti Disciplinary Committee",
-      href: "/academics/anti-disciplinary-committee",
-      icon: VscLaw,
-    },
+   
     {
       label: "Right to Information",
       href: "/academics/right-to-information",
@@ -365,8 +362,8 @@ const navigationItems = [
         title: "ACADEMIC EXCELLENCE",
         description:
           "Explore our diverse range of programs designed for tomorrow's leaders.",
-        image: "/university-classroom-students-learning.jpg",
-        link: "/academics/learn-more",
+        image: "/home/review2.webp",
+        link: "/contact",
       },
     },
   },
@@ -375,6 +372,31 @@ const navigationItems = [
     href: "#",
     megaMenu: {
       columns: [
+        {
+          title: "Information",
+          items: [
+              {
+              label: "Admission Process",
+              href: "/admissions/admission-process",
+              icon: VscServerProcess,
+            },
+             {
+              label: "Fee refund Policy",
+              href: "/admissions/fee-refund-policy.pdf",
+              icon: ReceiptText,
+            },
+            {
+              label: "Courses Requirements",
+              href: "/admissions/courses-requirements",
+              icon: FileText,
+            },
+              {
+              label: "International Admission",
+              href: "/admissions/international-admission",
+              icon: GiAirplaneDeparture,
+            },
+          ],
+        },
         {
           title: "Apply Now",
           items: [
@@ -393,23 +415,10 @@ const navigationItems = [
               href: "/admissions/registration",
               icon: FileSignature,
             },
+           
           ],
         },
-        {
-          title: "Information",
-          items: [
-            {
-              label: "Fee Structure",
-              href: "#",
-              icon: ReceiptText,
-            },
-            {
-              label: "Courses Requirements",
-              href: "/admissions/courses-requirements",
-              icon: FileText,
-            },
-          ],
-        },
+        
         {
           title: "Support",
           items: [
@@ -491,7 +500,7 @@ const topBarLinks = [
   { label: "LOGIN", href: "/login" },
   { label: "CAREER", href: "/career" },
   { label: "ALUMNI", href: "/alumni" },
-  { label: "OTHER", href: "/other" },
+  {label: "PUBLIC DISCLOSURE", href: "/public-disclosure" }
 ];
 
 const megaHorizontalPosition = {
