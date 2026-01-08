@@ -47,6 +47,8 @@ import { LuBookAudio } from "react-icons/lu";
 import { VscServerProcess } from "react-icons/vsc";
 import { GiAirplaneDeparture } from "react-icons/gi";
 import { CiLocationArrow1 } from 'react-icons/ci';
+import { IoReceiptOutline } from "react-icons/io5";
+import { HiOutlineBeaker } from "react-icons/hi2";
 const programmesData = {
   undergraduate: {
     title: "UNDERGRADUATE",
@@ -324,32 +326,32 @@ const navigationItems = [
         {
   title: "Academic Resources",
   items: [
+  
     {
-      label: "Student Feedback",
-      href: "/academics/student-feedback",
-      icon: MessageSquareMore, 
-    },
-    {
-      label: "Woman Cell",
-      href: "/academics/woman-cell",
-      icon: IoWomanOutline, 
+      label: "Research & Development Cell",
+      href: "/academics/research-and-development-cell",
+      icon: HiOutlineBeaker, 
     },
     {
       label: "Anti-Ragging Cell",
       href: "/academics/anti-ragging-cell",
       icon: ShieldCheck, 
     },
-    {
-      label: "Anti-Drug Cell",
-      href: "/academics/anti-drug-cell",
-      icon: CigaretteOff, 
-    },
+    // {
+    //   label: "Anti-Drug Cell",
+    //   href: "/academics/anti-drug-cell",
+    //   icon: CigaretteOff, 
+    // },
     {
       label: "Grievance Redressal Cell",
-      href: "/academics/grievance-redressal-cell",
+      href: "/academics/student-grievance-redressal-cell",
       icon: ClipboardList, 
     },
-   
+      {
+      label: "Placement Cell",
+      href: "/admissions/placement-cell.pdf",
+      icon: MessageSquareMore, 
+    },
     {
       label: "Right to Information",
       href: "/academics/right-to-information",
@@ -379,6 +381,11 @@ const navigationItems = [
               label: "Admission Process",
               href: "/admissions/admission-process",
               icon: VscServerProcess,
+            },
+             {
+              label: "Prospectus",
+              href: "/admissions/Bronchure.pdf",
+              icon: IoReceiptOutline ,
             },
              {
               label: "Fee refund Policy",
