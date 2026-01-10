@@ -32,6 +32,7 @@ const nursingOpenings = [
   },
 ]
 
+
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0 },
@@ -45,7 +46,7 @@ const page = () => {
         title="Join Our Mission"
         subtitle="Shape the Future of Education & Healthcare"
         description="At Smt. Manjira Devi University, we are committed to excellence in teaching, research, and service. Join our passionate team and inspire the next generation."
-        image="/home/campus2.jpg"
+        image="/new/bg.jpeg"
       />
 
       {/* ================= CURRENT OPENINGS ================= */}
