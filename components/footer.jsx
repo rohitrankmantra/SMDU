@@ -79,12 +79,11 @@ const footerLinks = {
     ],
   },
    programmes: {
-    title: "Programmes",
+    title: "Help & Support",
     items: [
-      { label: "Undergraduate", href: "/programmes/undergraduate" },
-      { label: "Postgraduate", href: "/programmes/postgraduate" },
-      { label: "Diploma", href: "/programmes/diploma" },
-      { label: "Doctorate", href: "/programmes/doctorate" },
+      { label: "Faqs", href: "/admissions/faqs" },
+      { label: "Contact Admissions", href: "/contact" },
+      { label: "Right to Infomation", href: "/academcics/right-to-information" },
     ],
   },
 };
@@ -100,7 +99,8 @@ export function Footer() {
   return (
     <footer className="relative bg-linear-to-br from-[#1a3491] to-[#d9363c] text-white overflow-hidden">
       {/* Pattern Overlay */}
-      <div className="absolute inset-0 opacity-10 pattern-dots" />
+<div className="absolute inset-0 opacity-10 pattern-dots pointer-events-none" />
+
 
       {/* Newsletter Section */}
       <div className="border-b border-white/20">
@@ -145,15 +145,13 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <Link href="/" className="flex items-center gap-4 mb-8 group cursor-pointer">
-              <div className="w-20 h-20 relative overflow-hidden rounded-full bg-white/20 backdrop-blur-sm shadow-lg">
                 <Image
                   src="/logo.webp"
                   alt="SMDU Logo"
-                  width={80}
-                  height={80}
-                  className="object-contain p-4"
+                  width={120}
+                  height={120}
+                  className="object-contain p-4 rounded-full "
                 />
-              </div>
               <div>
                 <h2 className="text-2xl font-serif font-bold group-hover:text-white transition-colors">
                   <span className="text-white">Smt. Manjira Devi</span>
