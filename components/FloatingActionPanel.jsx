@@ -1,19 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import {
-  Send,
-  PhoneCall,
-  Mail,
-  MessageCircle,
-} from "lucide-react";
+import { Send, PhoneCall, Mail, MessageCircle } from "lucide-react";
 import { BiLogoWhatsapp } from "react-icons/bi";
 
 const actions = [
   {
     label: "Apply Now",
     href: "/admissions/enquiry",
-    color: "bg-[#f97316]",
+    color: "bg-orange-500",
     hover: "hover:bg-orange-600",
     icon: Send,
   },
@@ -23,7 +18,7 @@ const actions = [
     color: "bg-green-500",
     hover: "hover:bg-green-600",
     icon: BiLogoWhatsapp,
-    external: false,
+    external: true,
   },
   {
     label: "Call Us",
@@ -50,45 +45,58 @@ const actions = [
 
 export function FloatingActionPanel() {
   return (
-    <div className="fixed right-4 top-[60%] -translate-y-1/2 z-40 flex flex-col gap-3 shadow-lg px-2 py-6   rounded-[120px]">
+    <div className="fixed right-0 top-[60%] -translate-y-1/2 z-50 flex flex-col gap-3 pr-2">
       {actions.map((item, i) => {
         const Icon = item.icon;
         const Wrapper = item.external ? "a" : Link;
 
         return (
           <Wrapper
-            key={i}
-            href={item.href}
-            target={item.external ? "_blank" : undefined}
-            rel={item.external ? "noopener noreferrer" : undefined}
-            aria-label={item.label}
-            className="group relative flex items-center"
-          >
-            {/* SLIDING STRIPE */}
-            <span
-              className={`absolute right-6 flex items-center gap-2
-              ${item.color} text-white
-              pl-8 pr-5 py-2 rounded-full text-sm font-medium
-              min-w-42.5
-              opacity-0 translate-x-6
-              group-hover:opacity-100 group-hover:translate-x-0
-              transition-all duration-300 shadow-lg whitespace-nowrap`}
-            >
-              <Icon className="w-4 h-4" />
-              {item.label}
-            </span>
+  key={i}
+  href={item.href}
+  target={item.external ? "_blank" : undefined}
+  rel={item.external ? "noopener noreferrer" : undefined}
+  aria-label={item.label}
+  className="group relative flex items-center justify-end"
+>
+  {/* STRIP */}
+  <span
+    className={`
+      absolute right-0 flex items-center gap-2
+      h-12 overflow-hidden
+      ${item.color} text-white
+      rounded-full shadow-lg
+      w-12 group-hover:w-44
+      transition-all duration-400 ease-out
+    `}
+  >
+    <span
+      className="
+        flex items-center gap-2
+        pl-4 pr-5 text-sm font-medium whitespace-nowrap
+        translate-x-10 group-hover:translate-x-0
+        transition-all duration-300 delay-100
+      "
+    >
+      <Icon className="w-4 h-4" />
+      {item.label}
+    </span>
+  </span>
 
-            {/* ICON */}
-            <span
-              className={`relative z-10 flex items-center justify-center
-              w-12 h-12 rounded-full text-white shadow-lg
-              ${item.color} ${item.hover}
-              transition-all duration-300
-              group-hover:-translate-x-1`}
-            >
-              <Icon className="w-5 h-5" />
-            </span>
-          </Wrapper>
+  {/* ICON */}
+  <span
+    className={`
+      relative z-10
+      flex items-center justify-center
+      w-12 h-12 rounded-full text-white
+      ${item.color} ${item.hover}
+      shadow-lg transition-all duration-300
+    `}
+  >
+    <Icon className="w-5 h-5" />
+  </span>
+</Wrapper>
+
         );
       })}
     </div>

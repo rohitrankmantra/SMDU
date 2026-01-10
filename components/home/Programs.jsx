@@ -16,13 +16,13 @@ const schools = [
   {
     title: "School of Engineering",
     courses: ["B.Tech", "M.Tech", "Diploma"],
-    image: "/home/campus4.jpg",
+    image: "/new/img7.jpeg",
     href: "/academics/school-of-engineering",
   },
   {
     title: "School of Science and Technology",
     courses: ["B.Sc", "M.Sc", "BCA", "MCA"],
-    image: "/home/campus4.jpg",
+    image: "/new/img4.jpeg",
     href: "/academics/school-of-science-and-technology",
   },
   {
@@ -63,7 +63,7 @@ const schools = [
   {
     title: "School of Legal",
     courses: ["BA LLB", "LLB"],
-    image: "/home/review1.webp",
+    image: "/new/img11.jpeg",
     href: "/academics/school-of-legal",
   },
   {

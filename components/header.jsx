@@ -552,52 +552,59 @@ export function Header() {
             : "bg-white/70 backdrop-blur-sm"
         }`}
       >
-        {/* Top Announcement Bar */}
-        <div className="bg-linear-to-r from-[#1a3491] to-[#d9363c] text-white text-sm py-2 md:px-32 px-0">
-          <div className="container mx-auto px-4 flex justify-between items-center">
-            {/* Scrolling Announcement */}
-            <div className="flex items-center gap-4">
-              <button className="text-white/80 hover:text-white">
-                <ArrowLeft className="w-4 h-4" />
-              </button>
-              <Link href="/fee-payment" className="hover:underline font-medium">
-                Click here for fee Payment
-              </Link>
-              <button className="text-white/80 hover:text-white">
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
+{/* Top Announcement Bar */}
+<div className="bg-linear-to-r from-[#1a3491] to-[#d9363c] text-white text-sm py-2.5">
+  <div className="container mx-auto px-4 md:px-8 lg:px-32 flex justify-between items-center gap-6">
+    {/* Left Side - Fee Payment Announcement (desktop only) */}
+    <div className="hidden md:flex items-center gap-4 whitespace-nowrap">
+      <button className="text-white/70 hover:text-white transition-colors">
+        <ArrowLeft className="w-4 h-4" />
+      </button>
+      
+      <Link 
+        href="/fee-payment" 
+        className="font-medium hover:underline transition-all hover:text-orange-300"
+      >
+        Click here for Fee Payment
+      </Link>
+      
+      <button className="text-white/70 hover:text-white transition-colors">
+        <ArrowRight className="w-4 h-4" />
+      </button>
+    </div>
 
-            {/* Top Bar Links */}
-            <div className="hidden lg:flex items-center gap-4">
-              {topBarLinks.map((link, idx) => (
-                <Link
-                  key={idx}
-                  href={link.href}
-                  className="hover:underline font-medium"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <div className="flex items-center gap-2 ml-2">
-                <Link
-                  href="https://facebook.com"
-                  target="_blank"
-                  className="hover:text-orange-400 transition-colors"
-                >
-                  <Facebook className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="https://linkedin.com"
-                  target="_blank"
-                  className="hover:text-orange-400 transition-colors"
-                >
-                  <Linkedin className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+    {/* Right Side - Important Links + Social Icons */}
+    <div className="flex items-center gap-2 md:gap-4 lg:gap-4">
+      {topBarLinks.map((link, idx) => (
+        <Link
+          key={idx}
+          href={link.href}
+          className="font-medium hover:underline text-xs sm:text-sm md:text-md transition-colors hover:text-[#fa7516]"
+        >
+          {link.label}
+        </Link>
+      ))}
+
+      {/* Social Icons - desktop pe visible */}
+      <div className="hidden md:flex items-center gap-4 ml-2">
+        <Link
+          href="https://facebook.com"
+          target="_blank"
+          className="hover:text-[#fa7516] transition-colors"
+        >
+          <Facebook className="w-4.5 h-4.5" />
+        </Link>
+        <Link
+          href="https://linkedin.com"
+          target="_blank"
+          className="hover:text-[#fa7516] transition-colors"
+        >
+          <Linkedin className="w-4.5 h-4.5" />
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
 
         {/* Main Header */}
         <div className="bg-white border-b border-gray-100 md:px-32">

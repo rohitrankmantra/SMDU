@@ -31,7 +31,7 @@ export default function PresidentsMessage() {
           <div className="relative group">
             <div className="aspect-4/3 bg-linear-to-br from-orange-500/5 to-orange-600/5 rounded-3xl shadow-xl overflow-hidden border border-orange-100 group-hover:border-orange-200 transition-all duration-500">
               <img
-                src="/about/president.jpg"
+                src="/about/president.jpeg"
                 alt="President"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />

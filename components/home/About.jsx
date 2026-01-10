@@ -27,7 +27,7 @@ export default function About() {
                   className="rounded-2xl shadow-lg w-full h-48 object-cover"
                 />
                 <img
-                  src="/home/feature1.jpg"
+                  src="/new/bg.jpeg"
                   alt="Graduation"
                   className="rounded-2xl shadow-lg w-full h-56 object-cover"
                 />

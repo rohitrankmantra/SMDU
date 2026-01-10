@@ -32,7 +32,7 @@ export default function ViceChancellorsMessage() {
           <div className="relative group">
             <div className="aspect-4/3 bg-linear-to-br from-orange-500/5 to-orange-600/5 rounded-3xl shadow-xl overflow-hidden border border-orange-100 transition-all duration-500">
               <img
-                src="/about/vc.jpg"
+                src="/about/vc.jpeg"
                 alt="Vice Chancellor"
                 className="w-full h-full object-cover object-top"
               />
