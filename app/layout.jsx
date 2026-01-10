@@ -36,8 +36,8 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <FloatingActionPanel/>
-        <Analytics/>
         <Footer/>
+        <Analytics/>
       </body>
     </html>
   )
