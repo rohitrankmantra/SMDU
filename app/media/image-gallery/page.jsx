@@ -8,11 +8,12 @@ import Image from "next/image";
 
 const page = () => {
   const tabs = [
+    
     { id: "all", name: "All" },
+    { id: "student", name: "Student Life" },
     { id: "campus", name: "Our Campus" },
     { id: "cultural", name: "Cultural & Sports" },
     { id: "news", name: "News & Events" },
-    { id: "student", name: "Student Life" },
   ];
 
   const imagePaths = {
@@ -29,6 +30,8 @@ const page = () => {
       "/home/program1.jpeg",
       "/home/homebg.jpeg",
       "/home/campus12.jpeg",
+      
+
     ],
     cultural: [
       "/home/campus1.heic",
@@ -66,15 +69,42 @@ const page = () => {
       "/news/news15.jpg",
       "/news/news16.jpg",
     ],
-    student: [
-      "/home/review1.webp",
-      "/home/review2.webp",
-      "/home/review3.webp",
-      "/home/life1.png",
-      "/home/life2.jpg",
-      "/home/life3.jpg",
-      "/home/life4.webp",
-    ],
+  student: [
+
+  "/new/annualday.jpeg",
+  "/new/annualday2.jpeg",
+  "/new/bg.jpeg",
+  "/new/img1.jpeg",
+  "/new/img2.jpeg",
+  "/new/img3.jpeg",
+  "/new/img4.jpeg",
+  "/new/img5.jpeg",
+  "/new/img6.jpeg",
+  "/new/img7.jpeg",
+  "/new/img8.jpeg",
+  "/new/img9.jpeg",
+  "/new/img10.jpeg",
+  "/new/img11.jpeg",
+  "/new/img12.jpeg",
+  "/new/img13.jpeg",
+  "/new/img14.jpeg",
+  "/new/img15.jpeg",
+  "/new/img16.jpeg",
+  "/new/img17.jpeg",
+  "/new/img18.jpeg",
+  "/new/ncc1.jpeg",
+  "/new/ncc2.jpeg",
+  "/new/ncc3.jpeg",
+
+   "/home/review1.webp",
+  "/home/review2.webp",
+  "/home/review3.webp",
+  "/home/life1.png",
+  "/home/life2.jpg",
+  "/home/life3.jpg",
+  "/home/life4.webp",
+]
+
   };
 
   const getAllImages = () => {
@@ -128,7 +158,7 @@ const page = () => {
         title="Image Gallery"
         subtitle="Moments from Campus Life"
         description="Explore our university campus through images showcasing academics, infrastructure, events, and student life."
-        image="/news/news10.jpg"
+        image="/new/img14.jpeg"
       />
 
       {/* ================= GALLERY SECTION ================= */}

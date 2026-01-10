@@ -65,7 +65,7 @@ const page = () => {
         subtitle="About Us"
         title="Empowering Healthcare Professionals"
         description="The School of Nursing Paramedical & Allied Science is committed to educating and training healthcare practitioners who deliver high-quality patient care. We offer undergraduate programs such as B.Pharma, B.Sc Nursing, and BPT that blend theory with clinical practice. Our mission is to develop knowledgeable, ethical, and compassionate professionals equipped to meet the healthcare needs of society through evidence-based practice, research, and community service."
-        image="/home/homebg.jpeg"
+        image="/new/img10.jpeg"
       />
 
       {/* ================= WHY CHOOSE ================= */}

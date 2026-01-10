@@ -317,7 +317,7 @@ const page = () => {
               className="bg-white rounded-2xl overflow-hidden border border-[#eee] shadow-sm hover:shadow-lg transition"
             >
               <img
-                src="/about/uttarkashi.jpg"
+                src="/about/uttarkashi.jpeg"
                 alt="Spiritual Uttarkashi"
                 className="w-full h-48 object-cover"
               />
@@ -346,7 +346,7 @@ const page = () => {
               className="bg-white rounded-2xl overflow-hidden border border-[#eee] shadow-sm hover:shadow-lg transition"
             >
               <img
-                src="https://i.pinimg.com/1200x/20/e7/c0/20e7c02408de28d1e932532376f2e688.jpg"
+                src="/about/uttarkashi2.jpeg"
                 alt="Himalayan Adventure"
                 className="w-full h-48 object-cover"
               />

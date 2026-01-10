@@ -43,7 +43,7 @@ const Page = () => {
         title="Video Gallery"
         subtitle="Moments from Campus Life"
         description="Explore our university campus through videos showcasing academics, infrastructure, events, and vibrant student life."
-        image="/news/news13.jpg"
+        image="/new/annualday.jpeg"
       />
 
       {/* ================= VIDEO GALLERY ================= */}
