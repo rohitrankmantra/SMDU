@@ -69,7 +69,7 @@ const schools = [
   {
     title: "School of Hotel Management and Tourism",
     courses: ["BHM", "BBA Tourism", "Diploma"],
-    image: "/home/review3.webp",
+    image: "/new/img8.jpeg",
     href: "/academics/school-of-hotel-management-and-tourism",
   },
 ];

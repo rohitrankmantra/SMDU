@@ -1,190 +1,255 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { motion } from "framer-motion"
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
 import {
   GraduationCap,
   MapPin,
   Phone,
   Mail,
   Facebook,
-  Twitter,
-  Instagram,
   Linkedin,
+  Instagram,
   Youtube,
   ArrowRight,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+  BookOpen,
+  Users,
+  Building2,
+  Camera,
+  FileText,
+  Download,
+  Crown,
+  UserCog,
+  ClipboardList,
+  Landmark,
+  UsersRound,
+  PiggyBank,
+  FileCheck,
+  Scale,
+  Video,
+  Mails,
+  CalendarDays,
+  TramFront,
+  ReceiptText,
+  FileSignature,
+  MessageSquareMore,
+  ShieldCheck,
+  CigaretteOff,
+  ChevronRight,
+} from "lucide-react";
+import { FaRegNewspaper } from "react-icons/fa";
+import { RiUserSettingsLine } from "react-icons/ri";
+import { MdOutlineManageHistory } from "react-icons/md";
+import { IoWomanOutline } from "react-icons/io5";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { LuBookAudio } from "react-icons/lu";
+import { VscServerProcess } from "react-icons/vsc";
+import { GiAirplaneDeparture } from "react-icons/gi";
+import { CiLocationArrow1 } from 'react-icons/ci';
+import { IoReceiptOutline } from "react-icons/io5";
+import { HiOutlineBeaker } from "react-icons/hi2";
 
 const footerLinks = {
-  quickLinks: [
-    { label: "About Us", href: "/about" },
-    { label: "Academics", href: "/academics" },
-    { label: "Admissions", href: "/admissions" },
-    { label: "Campus Life", href: "/campus" },
-    { label: "Research", href: "/academics#research" },
-    { label: "Placements", href: "/academics#placements" },
-  ],
-  programs: [
-    { label: "Engineering", href: "/academics#engineering" },
-    { label: "Management", href: "/academics#management" },
-    { label: "Sciences", href: "/academics#sciences" },
-    { label: "Humanities", href: "/academics#humanities" },
-    { label: "Commerce", href: "/academics#commerce" },
-    { label: "Law", href: "/academics#law" },
-  ],
-  resources: [
-    { label: "Student Portal", href: "#" },
-    { label: "Faculty Portal", href: "#" },
-    { label: "Library", href: "/campus#library" },
-    { label: "Downloads", href: "/media#downloads" },
-    { label: "Career", href: "#" },
-    { label: "Alumni", href: "#" },
-  ],
-}
+  ourSchools: {
+    title: "Our Schools",
+    items: [
+      { label: "School of Engineering", href: "/academics/school-of-engineering" },
+      { label: "School of Science and Technology", href: "/academics/school-of-science-and-technology" },
+      { label: "School of Commerce and Management Studies", href: "/academics/school-of-commerce-and-management-studies" },
+      { label: "School of Agriculture", href: "/academics/school-of-agriculture" },
+      { label: "School of Arts and Humanities", href: "/academics/school-of-arts" },
+      { label: "School of Yogic Science and Naturopathy", href: "/academics/school-of-yoga-science-and-naturopathy" },
+      { label: "School of Nursing, Paramedical & Allied Science", href: "/academics/school-of-nursing-paramedical-and-applied-science" },
+      { label: "School of Legal Studies", href: "/academics/school-of-legal" },
+      { label: "School of Hotel Management & Tourism", href: "/academics/school-of-hotel-management-and-tourism" },
+    ],
+  },
+  quickLinks: {
+    title: "Quick Links",
+    items: [
+      { label: "IQAC", href: "/iqac" },
+      { label: "Events", href: "/media/news-events" },
+      { label: "Login", href: "/login" },
+      { label: "Career", href: "/career" },
+      { label: "Alumni", href: "/alumni" },
+      { label: "Public Disclosure", href: "/public-disclosure" },
+      { label: "Ph.D Admissions 2026", href: "/admissions/phdadmission.pdf" },
+    ],
+  },
+   programmes: {
+    title: "Programmes",
+    items: [
+      { label: "Undergraduate", href: "/programmes/undergraduate" },
+      { label: "Postgraduate", href: "/programmes/postgraduate" },
+      { label: "Diploma", href: "/programmes/diploma" },
+      { label: "Doctorate", href: "/programmes/doctorate" },
+    ],
+  },
+};
 
 const socialLinks = [
-  { icon: Facebook, href: "#" },
-  { icon: Twitter, href: "#" },
+  { icon: Facebook, href: "https://facebook.com" },
+  { icon: Linkedin, href: "https://linkedin.com" },
   { icon: Instagram, href: "#" },
-  { icon: Linkedin, href: "#" },
   { icon: Youtube, href: "#" },
-]
+];
 
 export function Footer() {
   return (
-    <footer className="relative bg-text-dark text-white overflow-hidden">
-      <div className="absolute inset-0 opacity-5 pattern-grid" />
+    <footer className="relative bg-linear-to-br from-[#1a3491] to-[#d9363c] text-white overflow-hidden">
+      {/* Pattern Overlay */}
+      <div className="absolute inset-0 opacity-10 pattern-dots" />
 
-      {/* Newsletter */}
-      <div className="border-b border-white/10">
-        <div className="container mx-auto px-6 py-12 text-center">
+      {/* Newsletter Section */}
+      <div className="border-b border-white/20">
+        <div className="container mx-auto px-6 py-16 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4">
+            <h3 className="font-serif text-3xl md:text-4xl font-bold mb-4 tracking-wide">
               Stay Connected with SMDU
             </h3>
-            <p className="text-white/70 mb-6">
-              Subscribe for latest updates, news, and events.
+            <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+              Subscribe to receive the latest updates, academic news, event invitations, and exclusive opportunities from Smt. Manjira Devi University.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <form className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
               <Input
                 type="email"
-                placeholder="Enter your email"
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-[#f46b13]"
+                placeholder="Enter your email address"
+                className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white h-12"
               />
-              <Button className="bg-[#f46b13] hover:bg-[#e35c00] text-white">
-                Subscribe
-                <ArrowRight className="w-4 h-4 ml-2" />
+              <Button className="bg-white text-[#1a3491] hover:bg-white/90 h-12 font-semibold">
+                Subscribe Now
+                <ArrowRight className="w-5 h-5 ml-3" />
               </Button>
-            </div>
+            </form>
           </motion.div>
         </div>
       </div>
 
-      {/* Main Footer */}
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-
-          {/* LOGO + INFO */}
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-4 mb-6 group">
-              {/* LOGO IMAGE */}
-              <div className="w-14 h-14 rounded-full overflow-hidden bg-white shadow-lg">
-                <img
-                  src="/logo.webp"   // 👈 put your logo here
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-6 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 xl:gap-16">
+          {/* Logo + University Info */}
+          <motion.div
+            className="lg:col-span-2"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <Link href="/" className="flex items-center gap-4 mb-8 group cursor-pointer">
+              <div className="w-20 h-20 relative overflow-hidden rounded-full bg-white/20 backdrop-blur-sm shadow-lg">
+                <Image
+                  src="/logo.webp"
                   alt="SMDU Logo"
-                  className="w-full h-full object-contain p-2"
+                  width={80}
+                  height={80}
+                  className="object-contain p-4"
                 />
               </div>
-
               <div>
-                <h2 className="font-serif text-xl font-bold group-hover:text-[#f46b13] transition">
-                  Smt. Manjira Devi
+                <h2 className="text-2xl font-serif font-bold group-hover:text-white transition-colors">
+                  <span className="text-white">Smt. Manjira Devi</span>
                 </h2>
-                <p className="text-[#f46b13] text-sm font-semibold uppercase">
+                <p className="text-xl font-semibold uppercase tracking-wider text-white/90">
                   University
                 </p>
               </div>
             </Link>
 
-            <p className="text-white/70 mb-6">
-              Delivering world-class education, innovation, and research.
+            <p className="text-white/70 mb-8 leading-relaxed">
+              Empowering minds through innovative education, research, and holistic development in a nurturing environment.
             </p>
 
-            <div className="space-y-3 text-sm">
-              <div className="flex gap-3">
-                <MapPin className="w-5 h-5 text-[#f46b13]" />
-                <span className="text-white/70">Campus, India</span>
+            <div className="space-y-4 text-sm">
+              <div className="flex gap-4 items-start">
+                <MapPin className="w-6 h-6 text-white/80 shrink-0 mt-1" />
+                <span className="text-white/80">Uttarkashi, Uttarakhand, India</span>
               </div>
-              <div className="flex gap-3">
-                <Phone className="w-5 h-5 text-[#f46b13]" />
-                <span className="text-white/70">+91-XXXX-XXXXXX</span>
+              <div className="flex gap-4">
+                <Phone className="w-6 h-6 text-white/80 shrink-0" />
+                <div className="flex flex-col">
+                  <a href="tel:+918006345557" className="text-white/80 hover:text-white transition cursor-pointer">+91-80063-45557</a>
+                  <a href="tel:+918006345558" className="text-white/80 hover:text-white transition cursor-pointer">+91-80063-45558</a>
+                </div>
               </div>
-              <div className="flex gap-3">
-                <Mail className="w-5 h-5 text-[#f46b13]" />
-                <span className="text-white/70">info@smdu.edu.in</span>
+              <div className="flex gap-4">
+                <Mail className="w-6 h-6 text-white/80 shrink-0" />
+                <a href="mailto:info@smdu.edu.in" className="text-white/80 hover:text-white transition cursor-pointer">info@smdu.edu.in</a>
               </div>
             </div>
-          </div>
 
-          {/* LINKS */}
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h4 className="font-serif font-semibold text-lg mb-6 text-[#f46b13] capitalize">
-                {title.replace(/([A-Z])/g, " $1")}
+           
+          </motion.div>
+
+          {/* Footer Link Sections */}
+          {Object.entries(footerLinks).map(([key, section], index) => (
+            <motion.div
+              key={key}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 * (index + 1) }}
+            >
+              <h4 className="font-serif text-xl font-bold mb-6 text-white uppercase tracking-wider">
+                {section.title}
               </h4>
               <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link.label}>
+                {section.items.map((item) => (
+                  <li key={item.label}>
                     <Link
-                      href={link.href}
-                      className="text-white/70 hover:text-[#f46b13] transition"
+                      href={item.href}
+                      target={item.href.endsWith(".pdf") ? "_blank" : "_self"}
+                      rel={item.href.endsWith(".pdf") ? "noopener noreferrer" : undefined}
+                      className="flex items-center gap-3 text-white/70 hover:text-white transition group cursor-pointer"
                     >
-                      {link.label}
+                      {item.icon && <item.icon className="w-5 h-5 text-white/60 group-hover:text-white transition" />}
+                      {item.label}
+                      <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity ml-auto" />
                     </Link>
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
+      </div>
 
-        {/* BOTTOM */}
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+      {/* Bottom Bar */}
+      <div className="border-t border-white/20">
+        <div className="container mx-auto px-6 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            {/* Social Icons */}
+            <div className="flex gap-6">
+              {socialLinks.map((social, i) => (
+                <motion.a
+                  key={i}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all shadow-md hover:shadow-lg hover:shadow-white/20 cursor-pointer"
+                >
+                  <social.icon className="w-6 h-6 text-white" />
+                </motion.a>
+              ))}
+            </div>
 
-          {/* SOCIAL ICONS */}
-          <div className="flex gap-4">
-            {socialLinks.map((social, i) => (
-              <motion.a
-                key={i}
-                href={social.href}
-                whileHover={{ scale: 1.15, y: -4, rotate: 4 }}
-                transition={{ type: "spring", stiffness: 260 }}
-                className="
-                  relative w-10 h-10 rounded-full
-                  bg-white/10
-                  flex items-center justify-center
-                  hover:bg-[#f46b13]
-                  hover:shadow-xl hover:shadow-[#f46b13]/40
-                  transition-all duration-300
-                "
-              >
-                <social.icon className="w-5 h-5 text-white" />
-              </motion.a>
-            ))}
+            {/* Copyright */}
+            <p className="text-white text-sm text-center">
+              © {new Date().getFullYear()} Smt. Manjira Devi University. All Rights Reserved. | Designed & Developed with <a href="https://rankmantra.com" className="cursor-pointer">Rankmantra</a>
+            </p>
           </div>
-
-          <p className="text-white/50 text-sm">
-            © {new Date().getFullYear()} SMDU. All Rights Reserved.
-          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -232,7 +232,7 @@ const page = () => {
 
           {/* Lightbox */}
           {lightboxOpen && (
-            <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center px-4">
+            <div className="fixed inset-0 z-100 bg-black/90 flex items-center justify-center px-4">
               <button
                 onClick={closeLightbox}
                 className="absolute top-6 right-6 text-white"
