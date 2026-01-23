@@ -507,7 +507,7 @@ const topBarLinks = [
   { label: "LOGIN", href: "/login" },
   { label: "CAREER", href: "/career" },
   { label: "ALUMNI", href: "/alumni" },
-  {label: "PUBLIC DISCLOSURE", href: "/public-disclosure" }
+  {label: "PUBLIC SELF DISCLOSURE", href: "/public-self-disclosure" }
 ];
 
 const megaHorizontalPosition = {
