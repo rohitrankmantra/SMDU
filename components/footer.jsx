@@ -74,7 +74,7 @@ const footerLinks = {
       { label: "Login", href: "/login" },
       { label: "Career", href: "/career" },
       { label: "Alumni", href: "/alumni" },
-      { label: "Public Disclosure", href: "/public-disclosure" },
+      { label: "Public Self Disclosure", href: "/public-self-disclosure" },
       { label: "Ph.D Admissions 2026", href: "/admissions/phdadmission.pdf" },
     ],
   },
